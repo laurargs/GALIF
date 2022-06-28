@@ -1,158 +1,133 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomePage(
-      ),
-      theme: ThemeData(
-        //cardColor: Colors.deepOrange,
-
-        //brightness: Brightness.dark,
-      ),
-    );
-  }
+void main() {
+  runApp(
+    const MaterialApp(
+        home: HomePage()
+    ),
+  );
 }
 
+
 class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  var _formKey = GlobalKey<FormState>();
-  var isLoading = false;
-
-  void _submit() {
-    final isValid = _formKey.currentState?.validate();
-    if (!isValid!) {
-      return;
-    }
-    _formKey.currentState?.save();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      appBar: AppBar(
-
-        toolbarHeight: 100,
-
-        backgroundColor: Color(0xFFF4DE9C),
-
-
-        title: const Text(
-                "GALIF",
-                style: TextStyle(color: Color(0xFF571f04)),
-       ),
-
-        leading: const Icon(
-                Icons.arrow_back_ios_rounded,
-                color: Color(0xFF571f04),
-
-        ),
-
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(
-          bottom: Radius.circular(70),
-          )
-        )
-
-
-
-
-      ),
-      //body
+      backgroundColor: const Color(0xFFF25305),
       body: Padding(
-
-        padding: const EdgeInsets.all(30.0),
-
-        //form
-        child: Form(
-          key: _formKey,
-          child: Column(
-            children: <Widget>[
-              Text(
-               "CADASTRO",
-                style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold, color: Colors.black),
-              ),
-              //styling
-              SizedBox(
-                height: MediaQuery.of(context).size.width * 0.1,
-              ),
-              TextFormField(
-                decoration: InputDecoration(labelText: 'NOME DE USUÁRIO:'),
-                keyboardType: TextInputType.emailAddress,
-                onFieldSubmitted: (value) {},
-                obscureText: true,
-
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.width * 0.1,
-              ),
-              TextFormField(
-                decoration: InputDecoration(labelText: 'E-MAIL: '),
-                keyboardType: TextInputType.emailAddress,
-                onFieldSubmitted: (value) {
-                  //Validator
-                },
-                validator: (value) {
-                  if (value!.isEmpty ||
-                      !RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-                          .hasMatch(value!)) {
-                    return 'Enter a valid email!';
-                  }
-                  return null;
-                },
-              ),
-              //box styling
-              SizedBox(
-                height: MediaQuery.of(context).size.width * 0.1,
-              ),
-              //text input
-              TextFormField(
-                decoration: InputDecoration(labelText: 'SENHA:'),
-                keyboardType: TextInputType.emailAddress,
-                onFieldSubmitted: (value) {},
-                obscureText: true,
-
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.width * 0.1,
-              ),
-              TextFormField(
-                decoration: InputDecoration(labelText: 'CONFIRMAR SENHA:'),
-                keyboardType: TextInputType.emailAddress,
-                onFieldSubmitted: (value) {},
-                obscureText: true,
-
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.width * 0.1,
-              ),
-
-              RaisedButton(
-                padding: EdgeInsets.symmetric(
-                  vertical: 10.0,
-                  horizontal: 15.0,
-                ),
-                child: Text(
-                  "Submit",
-                  style: TextStyle(
-                    fontSize: 24.0,
+        padding: const EdgeInsets.all(16),
+        child: ListView(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const Text(
+                    'GALIF',
+                    style: TextStyle(
+                      fontSize: 40,
+                      color: Color(0xFF571f04),
+                    ),
                   ),
-                ),
-                onPressed: () => _submit(),
-              )
-            ],
-          ),
+                  const SizedBox(height: 3),
+                  Image.network(
+                    'https://i.ibb.co/hRFYdK9/Logo1.png',
+                    width: 200,
+                    height: 300,
+                    //fit: BoxFit.fitHeight,
+                  ),
+                  const SizedBox(height: 3),
+
+                  TextFormField(
+                    decoration: InputDecoration(labelText: 'NOME DE USUÁRIO:',
+                      labelStyle: TextStyle(
+                        fontSize: 17,
+                        color: Color(0xFFEFB03B),
+                      ),
+                      enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0xFFEFB03B),
+                            width: 2,
+                          )
+                      ),
+                    ),
+                    keyboardType: TextInputType.emailAddress,
+                    onFieldSubmitted: (value) {},
+                    obscureText: true,
+
+
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.width * 0.1,
+                  ),
+                  TextFormField(
+                    decoration: InputDecoration(labelText: 'SENHA:',
+                        labelStyle: TextStyle(
+                          fontSize: 17,
+                          color: Color(0xFFEFB03B),
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color(0xFFEFB03B),
+                              width: 2,
+                            )
+                        )
+                    ),
+                    keyboardType: TextInputType.emailAddress,
+                    onFieldSubmitted: (value) {},
+                    obscureText: true,
+
+
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.width * 0.1,
+                  ),
+                  const SizedBox(height: 3),
+                  const Text(
+                    'FAZER CADASTRO',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Color(0xFFF4DE9C),
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: onPressedButton,
+                    child: const Text(
+                      'ENTRAR',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Color(0xFF571F04),
+                      ),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xFFFFCC99),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                    ),
+                  )
+
+
+
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
   }
-}
 
+  void onPressedButton() {
+
+  }
+
+}
