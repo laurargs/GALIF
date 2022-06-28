@@ -39,6 +39,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
+      backgroundColor: const Color(0xFFF25305),
       //body
       body: Padding(
 
@@ -50,16 +51,16 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             children: <Widget>[
               Container(
-                height: 200,
+                height: 150,
                 decoration: new BoxDecoration(
-                  color: Colors.deepOrange,
+                  color: Color(0xFFF4DE9C),
 
                   boxShadow: [
-                    new BoxShadow(blurRadius: 40.0)
+                    new BoxShadow(blurRadius: 20.0)
                   ],
                   borderRadius: new BorderRadius.vertical(
                       bottom: new Radius.elliptical(
-                          MediaQuery.of(context).size.width, 100.0)),
+                          MediaQuery.of(context).size.width, 150.0)),
                 ),
               ),
 
@@ -68,63 +69,84 @@ class _HomePageState extends State<HomePage> {
 
               Text(
                 "GALIF",
-                style: TextStyle(fontSize: 36.0, fontWeight: FontWeight.bold, color: Colors.black),
+                style: TextStyle(fontSize: 36.0, fontWeight: FontWeight.bold, color: Color(0xFF571F04),),
               ),
               //styling
               SizedBox(
-                height: MediaQuery.of(context).size.width * 0.1,
+                height: 0.5,
               ),
               TextFormField(
-                // The validator receives the text that the user has entered.
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Please enter some text';
-                  }
-                  return null;
-                },
-              ),
-              TextFormField(
-                decoration: InputDecoration(labelText: 'NOME DE USUÁRIO:'),
+                decoration: InputDecoration(labelText: 'QUAL O TIPO DE INSERÇÃO?',
+                    labelStyle: TextStyle(
+                      fontSize: 17,
+                      color: Color(0xFF571F04),
+                    ),
+                    enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Color(0xFFF4DE9C),
+                          width: 2,
+                        )
+                    )
+                ),
                 keyboardType: TextInputType.emailAddress,
                 onFieldSubmitted: (value) {},
                 obscureText: true,
 
+
               ),
-              SizedBox(
-                height: MediaQuery.of(context).size.width * 0.1,
-              ),
-              TextFormField(
-                decoration: InputDecoration(labelText: 'E-MAIL: '),
-                keyboardType: TextInputType.emailAddress,
-                onFieldSubmitted: (value) {
-                  //Validator
-                },
-                validator: (value) {
-                  if (value!.isEmpty ||
-                      !RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-                          .hasMatch(value)) {
-                    return 'Enter a valid email!';
-                  }
-                  return null;
-                },
-              ),
-              //box styling
-              SizedBox(
-                height: MediaQuery.of(context).size.width * 0.1,
-              ),
+              SizedBox(height:1),
               //text input
               TextFormField(
-                decoration: InputDecoration(labelText: 'IDADE DO INDIVÍDUO:'),
+                decoration: InputDecoration(labelText: 'ESPÉCIE DO INDIVÍDUO:',
+                    labelStyle: TextStyle(
+                      fontSize: 17,
+                      color: Color(0xFF571F04),
+                    ),
+                    enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Color(0xFFF4DE9C),
+                          width: 2,
+                        )
+                    )
+                ),
                 keyboardType: TextInputType.emailAddress,
                 onFieldSubmitted: (value) {},
                 obscureText: true,
-
               ),
-              SizedBox(
-                height: MediaQuery.of(context).size.width * 0.1,
-              ),
+              SizedBox(height:1),
               TextFormField(
-                decoration: InputDecoration(labelText: 'PESO DO INDIVÍDUO:'),
+                decoration: InputDecoration(labelText: 'IDADE DO INDIVÍDUO:',
+                    labelStyle: TextStyle(
+                      fontSize: 17,
+                      color: Color(0xFF571F04),
+                    ),
+                    enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Color(0xFFF4DE9C),
+                          width: 2,
+                        )
+                    )
+                ),
+                keyboardType: TextInputType.emailAddress,
+                onFieldSubmitted: (value) {},
+                obscureText: true,
+
+
+              ),
+              SizedBox(height:1),
+              TextFormField(
+                decoration: InputDecoration(labelText: 'PESO DO INDIVÍDUO:',
+                    labelStyle: TextStyle(
+                      fontSize: 17,
+                      color: Color(0xFF571F04),
+                    ),
+                    enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Color(0xFFF4DE9C),
+                          width: 2,
+                        )
+                    )
+                ),
                 keyboardType: TextInputType.emailAddress,
                 onFieldSubmitted: (value) {},
                 obscureText: true,
@@ -134,24 +156,28 @@ class _HomePageState extends State<HomePage> {
                 height: MediaQuery.of(context).size.width * 0.1,
               ),
 
-              RaisedButton(
-                padding: EdgeInsets.symmetric(
-                  vertical: 10.0,
-                  horizontal: 15.0,
-                ),
-                child: Text(
-                  "Submit",
+              ElevatedButton(
+                onPressed: onPressedButton,
+                child: const Text(
+                  'INSERIR',
                   style: TextStyle(
-                    fontSize: 24.0,
+                    fontSize: 20,
+                    color: Color(0xFF571F04),
                   ),
-
                 ),
-                onPressed: () => _submit(),
-              )
+                style: ElevatedButton.styleFrom(
+                  primary: Color(0xFFF4DE9C),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
       ),
     );
+  }
+  void onPressedButton() {
   }
 }
