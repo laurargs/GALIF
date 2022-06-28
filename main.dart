@@ -34,6 +34,7 @@ class _HomePageState extends State<HomePage> {
                     'GALIF',
                     style: TextStyle(
                       fontSize: 40,
+                      fontWeight: FontWeight.bold,
                       color: Color(0xFF571f04),
                     ),
                   ),
@@ -91,13 +92,6 @@ class _HomePageState extends State<HomePage> {
                     height: MediaQuery.of(context).size.width * 0.1,
                   ),
                   const SizedBox(height: 3),
-                  const Text(
-                    'FAZER CADASTRO',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Color(0xFFF4DE9C),
-                    ),
-                  ),
                   ElevatedButton(
                     onPressed: onPressedButton,
                     child: const Text(
@@ -113,10 +107,14 @@ class _HomePageState extends State<HomePage> {
                         borderRadius: BorderRadius.circular(16),
                       ),
                     ),
-                  )
-
-
-
+                  ),
+                  const Text(
+                    'FAZER CADASTRO',
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Color(0xFFF4DE9C),
+                    ),
+                  ),
                 ],
               ),
             ),
