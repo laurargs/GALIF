@@ -23,6 +23,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFFF4DE9C),
+        toolbarHeight: 120,
         centerTitle: true,
         title: Text('CADASTRO',
           style: TextStyle(
