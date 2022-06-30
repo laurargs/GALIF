@@ -59,11 +59,6 @@ class _HomePageState extends State<HomePage> {
                           )
                       ),
                     ),
-                    keyboardType: TextInputType.emailAddress,
-                    onFieldSubmitted: (value) {},
-                    obscureText: true,
-
-
                   ),
                   SizedBox(
                     height: MediaQuery.of(context).size.width * 0.1,
@@ -82,9 +77,9 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     keyboardType: TextInputType.emailAddress,
-                    onFieldSubmitted: (value) {},
-                    obscureText: true,
-
+                    //onFieldSubmitted: (value) {},
+                    //obscureText: true,
+                    
 
                   ),
                   SizedBox(
@@ -103,11 +98,6 @@ class _HomePageState extends State<HomePage> {
                             )
                         )
                     ),
-                    keyboardType: TextInputType.emailAddress,
-                    onFieldSubmitted: (value) {},
-                    obscureText: true,
-
-
                   ),
                   SizedBox(
                     height: MediaQuery.of(context).size.width * 0.1,
@@ -126,11 +116,6 @@ class _HomePageState extends State<HomePage> {
                           )
                       ),
                     ),
-                    keyboardType: TextInputType.emailAddress,
-                    onFieldSubmitted: (value) {},
-                    obscureText: true,
-
-
                   ),
                   SizedBox(
                     height: MediaQuery.of(context).size.width * 0.1,
