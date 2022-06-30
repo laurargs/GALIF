@@ -102,7 +102,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     style: ElevatedButton.styleFrom(
-                      primary: Color(0xFFFFCC99),
+                      primary: Color(0xFFF4DE9C),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16),
                       ),
@@ -111,7 +111,7 @@ class _HomePageState extends State<HomePage> {
                   const Text(
                     'FAZER CADASTRO',
                     style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 13,
                       color: Color(0xFFF4DE9C),
                     ),
                   ),
@@ -127,4 +127,5 @@ class _HomePageState extends State<HomePage> {
   void onPressedButton() {
 
   }
+
 }
