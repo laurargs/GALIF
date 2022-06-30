@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -7,12 +6,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: HomePage(
-
       ),
       theme: ThemeData(
-        //cardColor: Colors.deepOrange,
-
-        //brightness: Brightness.dark,
       ),
     );
   }
@@ -40,41 +35,33 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       backgroundColor: const Color(0xFFF25305),
+      appBar: AppBar(
+        leading: Icon(Icons.arrow_back_sharp,
+          color: Color(0xFF571F04), size: 45),
+        backgroundColor: const Color(0xFFF4DE9C),
+        toolbarHeight: 120,
+
+        title:Text(
+          "GALIF",
+          style: TextStyle(fontSize: 32.0,fontWeight: FontWeight.bold, color: Color(0xFF571F04),),
+        ),
+          shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(59),
+          ),
+        ),
+      ),
       //body
+
       body: Padding(
-
         padding: const EdgeInsets.all(30.0),
-
         //form
         child: Form(
           key: _formKey,
           child: Column(
             children: <Widget>[
-              Container(
-                height: 150,
-                decoration: new BoxDecoration(
-                  color: Color(0xFFF4DE9C),
+              SizedBox( height: 2,),
 
-                  boxShadow: [
-                    new BoxShadow(blurRadius: 20.0)
-                  ],
-                  borderRadius: new BorderRadius.vertical(
-                      bottom: new Radius.elliptical(
-                          MediaQuery.of(context).size.width, 150.0)),
-                ),
-              ),
-
-
-
-
-              Text(
-                "GALIF",
-                style: TextStyle(fontSize: 36.0, fontWeight: FontWeight.bold, color: Color(0xFF571F04),),
-              ),
-              //styling
-              SizedBox(
-                height: 0.5,
-              ),
               TextFormField(
                 decoration: InputDecoration(labelText: 'QUAL O TIPO DE INSERÇÃO?',
                     labelStyle: TextStyle(
@@ -88,14 +75,11 @@ class _HomePageState extends State<HomePage> {
                         )
                     )
                 ),
-                keyboardType: TextInputType.emailAddress,
-                onFieldSubmitted: (value) {},
-                obscureText: true,
-
-
               ),
-              SizedBox(height:1),
+              SizedBox(height: MediaQuery.of(context).size.width * 0.1,),
+              const SizedBox(height: 3),
               //text input
+
               TextFormField(
                 decoration: InputDecoration(labelText: 'ESPÉCIE DO INDIVÍDUO:',
                     labelStyle: TextStyle(
@@ -109,13 +93,12 @@ class _HomePageState extends State<HomePage> {
                         )
                     )
                 ),
-                keyboardType: TextInputType.emailAddress,
-                onFieldSubmitted: (value) {},
-                obscureText: true,
               ),
-              SizedBox(height:1),
+              SizedBox(height: MediaQuery.of(context).size.width * 0.1,),
+              const SizedBox(height: 3),
+
               TextFormField(
-                decoration: InputDecoration(labelText: 'IDADE DO INDIVÍDUO:',
+                decoration: InputDecoration(labelText: 'IDADE DO INDIVÍDUO:', hintText: 'A idade deve ser em semanas',
                     labelStyle: TextStyle(
                       fontSize: 17,
                       color: Color(0xFF571F04),
@@ -127,15 +110,12 @@ class _HomePageState extends State<HomePage> {
                         )
                     )
                 ),
-                keyboardType: TextInputType.emailAddress,
-                onFieldSubmitted: (value) {},
-                obscureText: true,
-
-
               ),
-              SizedBox(height:1),
+              SizedBox(height: MediaQuery.of(context).size.width * 0.1,),
+              const SizedBox(height: 3),
+
               TextFormField(
-                decoration: InputDecoration(labelText: 'PESO DO INDIVÍDUO:',
+                decoration: InputDecoration(labelText: 'PESO DO INDIVÍDUO:', hintText: ' 0.00 kg',
                     labelStyle: TextStyle(
                       fontSize: 17,
                       color: Color(0xFF571F04),
@@ -147,14 +127,9 @@ class _HomePageState extends State<HomePage> {
                         )
                     )
                 ),
-                keyboardType: TextInputType.emailAddress,
-                onFieldSubmitted: (value) {},
-                obscureText: true,
-
               ),
-              SizedBox(
-                height: MediaQuery.of(context).size.width * 0.1,
-              ),
+              SizedBox(height: MediaQuery.of(context).size.width * 0.1,),
+              const SizedBox(height: 3),
 
               ElevatedButton(
                 onPressed: onPressedButton,
@@ -178,6 +153,5 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-  void onPressedButton() {
-  }
+  void onPressedButton() { }
 }
