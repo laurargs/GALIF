@@ -51,6 +51,7 @@ class _HomePageState extends State<HomePage> {
                     decoration: InputDecoration(labelText: 'NOME DE USUÁRIO:',
                       labelStyle: TextStyle(
                         fontSize: 17,
+                        fontWeight: FontWeight.bold,
                         color: Color(0xFFEFB03B),
                       ),
                       enabledBorder: UnderlineInputBorder(
@@ -73,6 +74,7 @@ class _HomePageState extends State<HomePage> {
                     decoration: InputDecoration(labelText: 'SENHA:',
                         labelStyle: TextStyle(
                           fontSize: 17,
+                          fontWeight: FontWeight.bold,
                           color: Color(0xFFEFB03B),
                         ),
                         enabledBorder: UnderlineInputBorder(
@@ -98,6 +100,7 @@ class _HomePageState extends State<HomePage> {
                       'ENTRAR',
                       style: TextStyle(
                         fontSize: 20,
+                        fontWeight: FontWeight.bold,
                         color: Color(0xFF571F04),
                       ),
                     ),
@@ -112,6 +115,7 @@ class _HomePageState extends State<HomePage> {
                     'FAZER CADASTRO',
                     style: TextStyle(
                       fontSize: 13,
+                      fontWeight: FontWeight.bold,
                       color: Color(0xFFF4DE9C),
                     ),
                   ),
