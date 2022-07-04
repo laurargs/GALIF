@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
   var _formKey = GlobalKey<FormState>();
   var isLoading = false;
 
-  int _indiceAtual = 0;
+  int _indiceAtual = 1;
   // final List<Widget> _telas = [ ];
 
   void _submit() {
