@@ -30,9 +30,9 @@ class _HomePageState extends State<HomePage> {
 
   int _indiceAtual = 1;
   //final List<Widget> _telas = [
-    //NewPageScreen("Meus pedidos"),
-    //NewPageScreen("teste 2"),
-    //NewPageScreen("Favoritos")
+  //NewPageScreen("Meus pedidos"),
+  //NewPageScreen("teste 2"),
+  //NewPageScreen("Favoritos")
   //];
 
 /*class NewPageScreen extends StatelessWidget { //classe para a mudança de página ao clicar o botao do BottomNavigationBar
@@ -62,12 +62,12 @@ class _HomePageState extends State<HomePage> {
 
 
         actions: [
-        Icon(
-            Icons.arrow_back_sharp, color: Color(0xFF571F04), size: 45),
+          Icon(
+              Icons.arrow_back_sharp, color: Color(0xFF571F04), size: 45),
         ],
 
 
-        title: Text("GALIF", style:
+        title: Text("    GALIF", style:
         TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold, color: Color(0xFF571F04),),
         ),
 
@@ -82,7 +82,7 @@ class _HomePageState extends State<HomePage> {
 
 
       body: Padding(
-       //child: SingleChildScrollView(
+        //child: SingleChildScrollView(
 
         padding: const EdgeInsets.all(30.0),
         child: Form(
@@ -155,7 +155,7 @@ class _HomePageState extends State<HomePage> {
 
   void onTabTapped(int index) { //colocar a ação que será feita ao clicar nos botões
     setState(()
-      {_indiceAtual = index;}
+    {_indiceAtual = index;}
     );
   }
 
