@@ -29,11 +29,11 @@ class _HomePageState extends State<HomePage> {
   var _formKey = GlobalKey<FormState>();
 
   int _indiceAtual = 1;
-  final List<Widget> _telas = [
+  //final List<Widget> _telas = [
     //NewPageScreen("Meus pedidos"),
     //NewPageScreen("teste 2"),
     //NewPageScreen("Favoritos")
-  ];
+  //];
 
 /*class NewPageScreen extends StatelessWidget { //classe para a mudança de página ao clicar o botao do BottomNavigationBar
   final String texto;
@@ -56,18 +56,21 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: const Color(0xFFF25305),
 
 
-
       appBar: AppBar(
-        leading: Icon(
-            Icons.arrow_back_sharp, color: Color(0xFF571F04), size: 45),
-
         backgroundColor: const Color(0xFFF4DE9C),
         toolbarHeight: 120,
 
+
+        actions: [
+        Icon(
+            Icons.arrow_back_sharp, color: Color(0xFF571F04), size: 45),
+        ],
+
+
         title: Text("GALIF", style:
-          TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold, color: Color(0xFF571F04),
-          ),
+        TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold, color: Color(0xFF571F04),),
         ),
+
 
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(
@@ -134,15 +137,15 @@ class _HomePageState extends State<HomePage> {
         items: [
           BottomNavigationBarItem(
               icon: Icon(Icons.add_alert, size: 40),
-              label: "Minha conta"
+              label: ""
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.warehouse_outlined, size: 40),
-              label:"Meus pedidos"
+              label:""
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.person, size: 40),
-              label: "Favoritos"
+              label: ""
           ),
         ],
       ),
