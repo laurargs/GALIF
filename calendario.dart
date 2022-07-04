@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 void main() => runApp(MyApp());
 int _selectedIndex = 0; //New
 
@@ -35,19 +34,19 @@ class _HomePageState extends State<HomePage> {
   //NewPageScreen("Favoritos")
   //];
 
-/*class NewPageScreen extends StatelessWidget { //classe para a mudança de página ao clicar o botao do BottomNavigationBar
-  final String texto;
-  NewPageScreen(this.texto);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Text(texto),
-      ),
-    );
-  }
-}*/
+  /*class NewPageScreen extends StatelessWidget { //classe para a mudança de página ao clicar o botao do BottomNavigationBar
+    final String texto;
+    NewPageScreen(this.texto);
+  
+    @override
+    Widget build(BuildContext context) {
+      return Container(
+        child: Center(
+          child: Text(texto),
+        ),
+      );
+    }
+  }*/
 
 
   @override
