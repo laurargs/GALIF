@@ -1,2 +1,5 @@
 Link:
 https://stackoverflow.com/questions/50242087/rounded-bottom-on-appbar
+
+link cabeçalho:
+https://stackoverflow.com/questions/55826789/flutter-rounded-corners-in-sliverappbar
