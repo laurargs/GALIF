@@ -1,11 +1,11 @@
-import 'package:aula_924/body/cadastro.dart';
-import 'package:aula_924/body/calendario.dart';
-import 'package:aula_924/body/gridview_page.dart';
-import 'package:aula_924/body/login.dart';
-import 'package:aula_924/body/menu.dart';
-import 'package:aula_924/body/tela_inserir.dart';
-import 'package:aula_924/cabecalho/cabecalho1.dart';
-import 'package:aula_924/cabecalho/cabecalho2.dart';
+import 'package:924-GALIF/body/cadastro.dart';
+import 'package:924-GALIF/body/calendario.dart';
+import 'package:924-GALIF/body/gridview_page.dart';
+import 'package:924-GALIF/body/login.dart';
+import 'package:924-GALIF/body/menu.dart';
+import 'package:924-GALIF/body/tela_inserir.dart';
+import 'package:924-GALIF/cabecalho/cabecalho1.dart';
+import 'package:924-GALIF/cabecalho/cabecalho2.dart';
 
 import 'package:flutter/material.dart';
 

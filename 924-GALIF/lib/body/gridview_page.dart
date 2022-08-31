@@ -1,6 +1,6 @@
-import 'package:aula_924/data/BD.dart';
-import 'package:aula_924/domain/pacote_turistico.dart';
-import 'package:aula_924/widgets/card_pacote_turistico.dart';
+import 'package:924-GALIF/data/BD.dart';
+import 'package:924-GALIF/domain/pacote_turistico.dart';
+import 'package:924-GALIF/widgets/card_pacote_turistico.dart';
 import 'package:flutter/material.dart';
 
 class GridViewPage extends StatefulWidget {
