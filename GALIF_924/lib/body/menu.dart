@@ -1,3 +1,4 @@
+import 'package:GALIF_924/body/calendario.dart';
 import 'package:GALIF_924/data/BD.dart';
 import 'package:GALIF_924/domain/pacote_turistico.dart';
 import 'package:GALIF_924/widgets/card_pacote_turistico.dart';
@@ -26,6 +27,42 @@ class _MenuState extends State<Menu> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               ElevatedButton(
+                onPressed: (){
+                  Navigator.pushNamed(context, "Calendario");
+                },
+                child: null,
+                style: ElevatedButton.styleFrom(
+                  primary: const Color(0xFFF4DE9C),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  fixedSize: Size.fromRadius(56),
+                ),
+              ),
+
+
+              ElevatedButton(
+                onPressed: (){
+                  Navigator.pushNamed(context, "TelaInserir");
+                },
+                child: null,
+                style: ElevatedButton.styleFrom(
+                  primary: const Color(0xFFF4DE9C),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  fixedSize: Size.fromRadius(56),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 40,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              ElevatedButton(
                 onPressed: onPressedButton,
                 child: null,
                 style: ElevatedButton.styleFrom(
@@ -36,6 +73,8 @@ class _MenuState extends State<Menu> {
                   fixedSize: Size.fromRadius(56),
                 ),
               ),
+
+
               ElevatedButton(
                 onPressed: onPressedButton,
                 child: null,
@@ -66,36 +105,8 @@ class _MenuState extends State<Menu> {
                   fixedSize: Size.fromRadius(56),
                 ),
               ),
-              ElevatedButton(
-                onPressed: onPressedButton,
-                child: null,
-                style: ElevatedButton.styleFrom(
-                  primary: const Color(0xFFF4DE9C),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  fixedSize: Size.fromRadius(56),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 40,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              ElevatedButton(
-                onPressed: onPressedButton,
-                child: null,
-                style: ElevatedButton.styleFrom(
-                  primary: const Color(0xFFF4DE9C),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  fixedSize: Size.fromRadius(56),
-                ),
-              ),
+
+
               ElevatedButton(
                 onPressed: onPressedButton,
                 child: null,
