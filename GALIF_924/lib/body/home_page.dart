@@ -4,8 +4,7 @@ import 'package:GALIF_924/body/gridview_page.dart';
 import 'package:GALIF_924/body/login.dart';
 import 'package:GALIF_924/body/menu.dart';
 import 'package:GALIF_924/body/tela_inserir.dart';
-import 'package:GALIF_924/cabecalho/cabecalho1.dart';
-import 'package:GALIF_924/cabecalho/cabecalho2.dart';
+
 
 import 'package:flutter/material.dart';
 
@@ -21,26 +20,19 @@ class _HomePageState extends State<HomePage> {
   List body = const [
     Login(),
     Menu(),
+    TelaDeInserir(),
     //Cadastro(),
     //Calendario(),
     //GridViewPage(),
-    //TelaDeInserir(),
     //menu(),
   ];
 
-  /*int _indiceCab = 0;
-  List cabecalhos = const [
-    Cabecalho2(),
-    cabecalho1(),
-  ];
-  */
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFF25305),
 
-      //appBar: cabecalhos[_indiceCab],
 
       appBar: AppBar(
         backgroundColor: const Color(0xFFF4DE9C),
@@ -63,7 +55,9 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
 
+
       body: body[_indiceAtual],
+
 
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: false, //retirar label

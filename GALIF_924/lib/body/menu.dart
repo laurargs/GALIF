@@ -27,11 +27,7 @@ class _MenuState extends State<Menu> {
             children: <Widget>[
               ElevatedButton(
                 onPressed: onPressedButton,
-                child: new Image.network(
-                  'https://i.ibb.co/sQVBpZy/calendar.png',
-                  width: 130,
-                  height: 130,
-                ),
+                child: null,
                 style: ElevatedButton.styleFrom(
                   primary: const Color(0xFFF4DE9C),
                   shape: RoundedRectangleBorder(
@@ -42,49 +38,7 @@ class _MenuState extends State<Menu> {
               ),
               ElevatedButton(
                 onPressed: onPressedButton,
-                child: new Image.network(
-                  'https://i.ibb.co/F37pxBr/add.png',
-                  width: 100,
-                  height: 130,
-                ),
-                style: ElevatedButton.styleFrom(
-                  primary: const Color(0xFFF4DE9C),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  fixedSize: Size.fromRadius(56),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 40,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              ElevatedButton(
-                onPressed: onPressedButton,
-                child: new Image.network(
-                  'https://i.ibb.co/BNGsjvn/grafico.png',
-                  width: 100,
-                  height: 130,
-                ),
-                style: ElevatedButton.styleFrom(
-                  primary: const Color(0xFFF4DE9C),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  fixedSize: Size.fromRadius(56),
-                ),
-              ),
-              ElevatedButton(
-                onPressed: onPressedButton,
-                child: new Image.network(
-                  'https://i.ibb.co/CJyBmJY/alimentacao.png',
-                  width: 100,
-                  height: 130,
-                ),
+                child: null,
                 style: ElevatedButton.styleFrom(
                   primary: const Color(0xFFF4DE9C),
                   shape: RoundedRectangleBorder(
@@ -103,11 +57,7 @@ class _MenuState extends State<Menu> {
             children: <Widget>[
               ElevatedButton(
                 onPressed: onPressedButton,
-                child: new Image.network(
-                  'https://i.ibb.co/Ms01Yt8/limpar.png',
-                  width: 100,
-                  height: 130,
-                ),
+                child: null,
                 style: ElevatedButton.styleFrom(
                   primary: const Color(0xFFF4DE9C),
                   shape: RoundedRectangleBorder(
@@ -118,11 +68,37 @@ class _MenuState extends State<Menu> {
               ),
               ElevatedButton(
                 onPressed: onPressedButton,
-                child: new Image.network(
-                  'https://i.ibb.co/Gx8vMNT/coletar.png',
-                  width: 100,
-                  height: 130,
+                child: null,
+                style: ElevatedButton.styleFrom(
+                  primary: const Color(0xFFF4DE9C),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  fixedSize: Size.fromRadius(56),
                 ),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 40,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              ElevatedButton(
+                onPressed: onPressedButton,
+                child: null,
+                style: ElevatedButton.styleFrom(
+                  primary: const Color(0xFFF4DE9C),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  fixedSize: Size.fromRadius(56),
+                ),
+              ),
+              ElevatedButton(
+                onPressed: onPressedButton,
+                child: null,
                 style: ElevatedButton.styleFrom(
                   primary: const Color(0xFFF4DE9C),
                   shape: RoundedRectangleBorder(
