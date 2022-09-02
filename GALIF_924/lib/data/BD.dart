@@ -1,4 +1,4 @@
-import 'package:aula_924/domain/pacote_turistico.dart';
+import 'package:GALIF_924/domain/pacote_turistico.dart';
 
 class BD {
   static List<PacoteTuristico> lista = [

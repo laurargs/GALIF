@@ -7,7 +7,7 @@ Projeto das aulas da disciplina de Programação Móvel da turma 924 - IFAL - ca
 
 1. Abra o terminal
 2. Acesse a pasta onde deseja baixar o projeto.
-3. Utilize o comando (baixar) o projeto: `git clone https://github.com/tarsis/aula_924.git`
+3. Utilize o comando (baixar) o projeto: `git clone https://github.com/laurargs/GALIF.git`
    </br>
 
 ## **Baixando a versão mais atual do projeto**
