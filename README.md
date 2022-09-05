@@ -13,5 +13,5 @@ Projeto das aulas da disciplina de Programação Móvel da turma 924 - IFAL - ca
 ## **Baixando a versão mais atual do projeto**
 
 1. Abra o terminal e acesse a pasta do projeto ou abra o terminal da propria IDE (VSCode ou Android Studio)
-2. Execute o comando e digite: `git pull origin master`
+2. Execute o comando e digite: `git pull origin main`
    </br>
