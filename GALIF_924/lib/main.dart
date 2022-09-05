@@ -2,6 +2,7 @@ import 'package:GALIF_924/body/cadastro.dart';
 import 'package:GALIF_924/body/calendario.dart';
 import 'package:GALIF_924/body/gridview_page.dart';
 import 'package:GALIF_924/body/home_page.dart';
+import 'package:GALIF_924/body/inicio.dart';
 import 'package:GALIF_924/body/login.dart';
 import 'package:GALIF_924/body/menu.dart';
 import 'package:GALIF_924/body/notification.dart';
