@@ -17,7 +17,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _indiceAtual = 0;
+  int _indiceAtual = 1;
   List body = const [
     Notificacao(),
     Menu(),
