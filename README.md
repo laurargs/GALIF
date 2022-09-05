@@ -15,3 +15,6 @@ Projeto das aulas da disciplina de Programação Móvel da turma 924 - IFAL - ca
 1. Abra o terminal e acesse a pasta do projeto ou abra o terminal da propria IDE (VSCode ou Android Studio)
 2. Execute o comando e digite: `git pull origin main`
    </br>
+   
+## Colocar as dependencias do flutter (Antes acesse a pasta GALIF_924)
+``flutter pub get``
