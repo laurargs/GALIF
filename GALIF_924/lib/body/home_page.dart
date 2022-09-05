@@ -20,9 +20,9 @@ class _HomePageState extends State<HomePage> {
   int _indiceAtual = 0;
   List body = const [
     Notificacao(),
-    Login(),
     Menu(),
-    //TelaDeInserir(),
+    TelaDeInserir(),
+    //Login(),
     //Cadastro(),
     //Calendario(),
     //GridViewPage(),
