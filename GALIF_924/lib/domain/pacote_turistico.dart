@@ -1,27 +1,20 @@
+import 'package:flutter/cupertino.dart';
+
 class PacoteTuristico {
   final String imagem;
-  final String titulo;
-  final String cidade;
-  final int numDiarias;
-  final int numPessoas;
-  final int numParcelas;
-  final int desconto;
-  final String transporte;
-  final String validade;
-  final double precoAtual;
-  final double precoAntigo;
+  final String nome;
+  final String peso;
+  final String semanas;
+  final String especie;
+
 
   PacoteTuristico({
-    required this.validade,
     required this.imagem,
-    required this.titulo,
-    required this.cidade,
-    required this.numDiarias,
-    required this.numPessoas,
-    required this.numParcelas,
-    required this.desconto,
-    required this.transporte,
-    required this.precoAtual,
-    required this.precoAntigo,
+    required this.nome,
+    required this.peso,
+    required this.semanas,
+    required this.especie,
+    
   });
+
 }

@@ -26,15 +26,9 @@ class _PacoteDetalhesState extends State<PacoteDetalhes> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  widget.pacoteTuristico.cidade,
-                  style: const TextStyle(
-                    fontSize: 16,
-                  ),
-                ),
                 const SizedBox(height: 8),
                 Text(
-                  widget.pacoteTuristico.titulo,
+                  widget.pacoteTuristico.nome,
                   style: const TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.w600,
@@ -42,42 +36,20 @@ class _PacoteDetalhesState extends State<PacoteDetalhes> {
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  widget.pacoteTuristico.transporte,
+                  widget.pacoteTuristico.peso,
                   style: const TextStyle(
                     fontSize: 15,
                   ),
                 ),
+                
                 const SizedBox(height: 8),
-                Text(
-                  '${widget.pacoteTuristico.numDiarias} diárias',
-                  style: const TextStyle(
-                    fontSize: 15,
-                  ),
-                ),
-                const SizedBox(height: 8),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Válido para o periodo:',
-                      style: const TextStyle(
-                        fontSize: 15,
-                      ),
-                    ),
-                    Text(
-                      'A partir de R\$ ${widget.pacoteTuristico.precoAntigo}',
-                      style: const TextStyle(
-                        fontSize: 15,
-                      ),
-                    ),
-                  ],
-                ),
+                
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Expanded(
                       child: Text(
-                        widget.pacoteTuristico.validade,
+                        widget.pacoteTuristico.semanas,
                         style: const TextStyle(
                           fontSize: 24,
                         ),
@@ -85,13 +57,11 @@ class _PacoteDetalhesState extends State<PacoteDetalhes> {
                     ),
                     const SizedBox(width: 24),
                     Text(
-                      'R\$ ${widget.pacoteTuristico.precoAtual}',
-                      style: const TextStyle(
-                        fontSize: 38,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xFFFD6C00),
-                      ),
-                    ),
+                  widget.pacoteTuristico.especie,
+                  style: const TextStyle(
+                    fontSize: 16,
+                  ),
+                ),
                   ],
                 ),
 
