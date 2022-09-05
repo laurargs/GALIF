@@ -3,6 +3,7 @@ import 'package:GALIF_924/body/calendario.dart';
 import 'package:GALIF_924/body/gridview_page.dart';
 import 'package:GALIF_924/body/login.dart';
 import 'package:GALIF_924/body/menu.dart';
+import 'package:GALIF_924/body/notification.dart';
 import 'package:GALIF_924/body/tela_inserir.dart';
 
 
@@ -18,9 +19,10 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _indiceAtual = 0;
   List body = const [
+    Notificacao(),
     Login(),
     Menu(),
-    TelaDeInserir(),
+    //TelaDeInserir(),
     //Cadastro(),
     //Calendario(),
     //GridViewPage(),
