@@ -13,17 +13,17 @@ void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: 'HomePage',
+      initialRoute: 'Inicio',
   
       routes: { 
         "Cadastro": (context) => const Cadastro(), 
         "Calendario": (context) => const Calendario(),
         "GridView": (context) => const GridViewPage(),
         "HomePage":(context) => const HomePage(),
+        "Inicio":(context) => const Inicio(),
         "Login":(context) => const Login(),
         "Menu":(context) => const Menu(),
         "Notificacao":(context) => const Notificacao(),
-        //"PacoteDetalhes" :(context) => const PacoteDetalhes(pacoteTuristico: pacoteTuristico),
         "TelaInserir":(context) => const TelaDeInserir(),
       },
     ),
