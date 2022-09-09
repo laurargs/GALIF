@@ -101,7 +101,7 @@ class _LoginState extends State<Login> {
                 ElevatedButton(
                   onPressed: onPressedButton,
                   child: const Text(
-                    'ENVIAR',
+                    'LOGIN',
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -123,6 +123,5 @@ class _LoginState extends State<Login> {
     );
   }
 
-  void onPressedButton() {
-  }
+  void onPressedButton() {}
 }

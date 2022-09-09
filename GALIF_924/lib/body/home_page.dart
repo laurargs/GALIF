@@ -6,7 +6,6 @@ import 'package:GALIF_924/body/menu.dart';
 import 'package:GALIF_924/body/notification.dart';
 import 'package:GALIF_924/body/tela_inserir.dart';
 
-
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -21,27 +20,23 @@ class _HomePageState extends State<HomePage> {
   List body = const [
     Notificacao(),
     Menu(),
-    TelaDeInserir(),
+    //TelaDeInserir(),
     //Login(),
     //Cadastro(),
     //Calendario(),
-    //GridViewPage(),
-    //menu(),
+    GridViewPage(),
   ];
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFF25305),
-
-
       appBar: AppBar(
         backgroundColor: const Color(0xFFF4DE9C),
         toolbarHeight: 120,
-        actions: [
-          Icon(Icons.arrow_back_sharp, color: Color(0xFF571F04), size: 45),
-        ],
+        // actions: [
+        //   Icon(Icons.arrow_back_sharp, color: Color(0xFF571F04), size: 45),
+        // ],
         title: Text(
           "    GALIF",
           style: TextStyle(
@@ -56,11 +51,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-
-
       body: body[_indiceAtual],
-
-
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: false, //retirar label
         showUnselectedLabels: false, //retirar label ao ser selecionada
