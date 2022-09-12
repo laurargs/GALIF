@@ -26,7 +26,7 @@ class _PacoteDetalhesState extends State<PacoteDetalhes> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(height: 8),
+                const SizedBox(height: 11),
                 Text(
                   widget.pacoteTuristico.nome,
                   style: const TextStyle(
@@ -34,14 +34,14 @@ class _PacoteDetalhesState extends State<PacoteDetalhes> {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                const SizedBox(height: 8),
+                const SizedBox(height: 11),
                 Text(
-                  widget.pacoteTuristico.peso,
+                  widget.pacoteTuristico.especie,
                   style: const TextStyle(
-                    fontSize: 15,
+                    fontSize: 17,
                   ),
                 ),
-                const SizedBox(height: 8),
+                const SizedBox(height: 11),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -49,15 +49,15 @@ class _PacoteDetalhesState extends State<PacoteDetalhes> {
                       child: Text(
                         widget.pacoteTuristico.semanas,
                         style: const TextStyle(
-                          fontSize: 24,
+                          fontSize: 20,
                         ),
                       ),
                     ),
                     const SizedBox(width: 24),
                     Text(
-                      widget.pacoteTuristico.especie,
+                      "Peso: ${widget.pacoteTuristico.peso}",
                       style: const TextStyle(
-                        fontSize: 16,
+                        fontSize: 20,
                       ),
                     ),
                   ],
