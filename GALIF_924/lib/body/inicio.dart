@@ -14,7 +14,7 @@ class _InicioState extends State<Inicio> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(10.0),
+      padding: const EdgeInsets.all(25.0),
       child: Container(
         color: Colors.orange,
         child: Column(
@@ -34,7 +34,7 @@ class _InicioState extends State<Inicio> {
               children: <Widget>[
                 ElevatedButton(
                   onPressed: (){
-                  Navigator.pushNamed(context, "TesteLogin");
+                  Navigator.pushNamed(context, "Login");
                   },
                   child: Text('Login', style: TextStyle(color: Colors.black, fontSize: 25)),
                   style: ElevatedButton.styleFrom(

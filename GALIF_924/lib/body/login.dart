@@ -11,12 +11,6 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  int _indiceAtual = 1;
-  List body = const [
-    Notificacao(),
-    Menu(),
-    GridViewPage(),
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -128,7 +122,9 @@ class _LoginState extends State<Login> {
                   height: MediaQuery.of(context).size.width * 0.1,
                 ),
                 ElevatedButton(
-                  onPressed: onPressedButton,
+                  onPressed: () {
+                  Navigator.pushNamed(context, "HomePage");
+                },
                   child: const Text(
                     'LOGIN',
                     style: TextStyle(
@@ -148,36 +144,6 @@ class _LoginState extends State<Login> {
             ),
           ),
       
-      bottomNavigationBar: BottomNavigationBar(
-        showSelectedLabels: false, //retirar label
-        showUnselectedLabels: false, //retirar label ao ser selecionada
-        backgroundColor:
-            const Color(0xFFF4DE9C), //cor da barra do BottomNavigationBar
-        currentIndex: _indiceAtual,
-        onTap: onTabTapped, //ação ao clicar no icone
-        items: [
-          BottomNavigationBarItem(
-              icon: Icon(Icons.add_alert, size: 40, color: Color.fromARGB(255, 104, 78, 65)), label: "", activeIcon: Icon(Icons.add_alert, color: Color(0xFF571F04), size: 40),
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.warehouse_outlined, size: 40, color: Color.fromARGB(255, 104, 78, 65)), label: "", activeIcon: Icon(Icons.warehouse_outlined, color: Color(0xFF571F04), size: 40),
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.person, size: 40, color: Color.fromARGB(255, 104, 78, 65)), label: "", activeIcon: Icon(Icons.person, color: Color(0xFF571F04), size: 40),
-          ),
-  
-        ],
-      ),
     );
-  }
-
-  void onTabTapped(int index) {
-    //colocar a ação que será feita ao clicar nos botões
-    setState(() {
-      _indiceAtual = index;
-    });
-  }
-
-  void onPressedButton() {
   }
 }
