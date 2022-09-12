@@ -18,3 +18,12 @@ class PacoteTuristico {
   });
 
 }
+  class NewPath {
+  final String imagem;
+
+  NewPath({
+    required this.imagem,
+  });
+}
+
+}
