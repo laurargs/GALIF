@@ -14,7 +14,7 @@ class _InicioState extends State<Inicio> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(25.0),
+      padding: const EdgeInsets.all(0),
       child: Container(
         color: Colors.orange,
         child: Column(
