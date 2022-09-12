@@ -1,6 +1,5 @@
-import 'package:GALIF_924/data/BD.dart';
 import 'package:GALIF_924/data/Bottom.dart';
-import 'package:GALIF_924/domain/pacote_turistico.dart';
+import 'package:GALIF_924/domain/variaveis_galinhas.dart';
 import 'package:flutter/material.dart';
 
 class Menu extends StatefulWidget {
@@ -11,7 +10,6 @@ class Menu extends StatefulWidget {
 }
 
 class _MenuState extends State<Menu> {
-  List<PacoteTuristico> list = BD.lista;
   List<NewPath> listNewPath = Bottom.listabottom;
 
   @override

@@ -30,7 +30,7 @@ class _GridViewPageState extends State<GridViewPage> {
       shrinkWrap: true,
       itemCount: list.length,
       itemBuilder: (context, index) {
-        return CardPacoteTuristico(
+        return Card_Galinhas(
           pacoteTuristico: list[index],
         );
       },

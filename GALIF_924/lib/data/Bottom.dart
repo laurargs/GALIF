@@ -1,4 +1,4 @@
-import 'package:GALIF_924/domain/pacote_turistico.dart';
+import 'package:GALIF_924/domain/variaveis_galinhas.dart';
 import 'package:flutter/cupertino.dart';
 
 class Bottom {

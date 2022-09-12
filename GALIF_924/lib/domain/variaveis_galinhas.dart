@@ -25,5 +25,3 @@ class PacoteTuristico {
     required this.imagem,
   });
 }
-
-}
