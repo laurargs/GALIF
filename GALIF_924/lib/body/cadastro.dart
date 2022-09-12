@@ -99,7 +99,9 @@ class _CadastroState extends State<Cadastro> {
                   height: MediaQuery.of(context).size.width * 0.1,
                 ),
                 ElevatedButton(
-                  onPressed: onPressedButton,
+                 onPressed: () {
+                  Navigator.pushNamed(context, "Inicio");
+                },
                   child: const Text(
                     'CADASTRAR',
                     style: TextStyle(
