@@ -25,7 +25,7 @@ class _GridViewPageState extends State<GridViewPage> {
     return GridView.builder(
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        childAspectRatio: 0.4,
+        childAspectRatio: 0.8,
       ),
       shrinkWrap: true,
       itemCount: list.length,
