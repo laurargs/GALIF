@@ -19,8 +19,8 @@ class _NotificacaoState extends State<Notificacao> {
         itemBuilder: (BuildContext context, int index) {
           return ListTile(
             shape: Border(bottom: BorderSide(),),
+            leading: const Icon(Icons.list),
             title: Text("Notificação " + "${index + 1}", style: TextStyle(fontWeight: FontWeight.bold)),
-            trailing: const Icon(Icons.chevron_right),
           );
          },     
        )
