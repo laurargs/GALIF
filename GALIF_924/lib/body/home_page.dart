@@ -61,11 +61,15 @@ class _HomePageState extends State<HomePage> {
         onTap: onTabTapped, //ação ao clicar no icone
         items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.add_alert, size: 40), label: ""),
+              icon: Icon(Icons.add_alert, size: 40), label: "", activeIcon: Icon(Icons.add_alert, color: Color(0xFF571F04), size: 40),
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.warehouse_outlined, size: 40), label: ""),
+              icon: Icon(Icons.warehouse_outlined, size: 40), label: "", activeIcon: Icon(Icons.warehouse_outlined, color: Color(0xFF571F04), size: 40),
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.person, size: 40), label: ""),
+              icon: Icon(Icons.person, size: 40), label: "", activeIcon: Icon(Icons.person, color: Color(0xFF571F04), size: 40),
+          ),
+  
         ],
       ),
     );
