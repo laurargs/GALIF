@@ -33,7 +33,7 @@ class BD {
       especie: 'Galinha do pé seco',
     ),
     PacoteTuristico(
-      imagem: 'https://i.ibb.co/FsY1gBx/Galinha2.jpg',
+      imagem: 'https://i.ibb.co/rvsdQff/Galinha1.jpg',
       nome: 'Zeze',
       peso: '6kg',
       semanas: '14 semanas',

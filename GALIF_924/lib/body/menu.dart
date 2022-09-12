@@ -26,7 +26,7 @@ class _MenuState extends State<Menu> {
             children: <Widget>[
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, "Calendario");
+                  Navigator.pushReplacementNamed(context, "Calendario");
                 },
                 child: null,
                 style: ElevatedButton.styleFrom(

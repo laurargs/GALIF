@@ -34,7 +34,7 @@ class _InicioState extends State<Inicio> {
               children: <Widget>[
                 ElevatedButton(
                   onPressed: (){
-                  Navigator.pushNamed(context, "Login");
+                  Navigator.pushNamed(context, "TesteLogin");
                   },
                   child: Text('Login', style: TextStyle(color: Colors.black, fontSize: 25)),
                   style: ElevatedButton.styleFrom(

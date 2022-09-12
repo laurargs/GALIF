@@ -1,3 +1,6 @@
+import 'package:GALIF_924/body/gridview_page.dart';
+import 'package:GALIF_924/body/menu.dart';
+import 'package:GALIF_924/body/notification.dart';
 import 'package:flutter/material.dart';
 
 class Calendario extends StatefulWidget {
@@ -10,13 +13,9 @@ class Calendario extends StatefulWidget {
 class _CalendarioState extends State<Calendario> {
   int _indiceAtual = 1;
   List body = const [
-    //Notificacao(),
-    //Menu(),
-    //TelaDeInserir(),
-    //Login(),
-    //Cadastro(),
-    //Calendario(),
-    //GridViewPage(),
+    Notificacao(),
+    Menu(),
+    GridViewPage(),
   ];
 
   @override
@@ -43,11 +42,9 @@ class _CalendarioState extends State<Calendario> {
           ),
         ),
       ),
-      
       body: Center(child: Form(  
         child: Column(
           children: <Widget>[
-            SizedBox(height: 20),
             Text(
               "CALENDÁRIO",
               style: TextStyle(
