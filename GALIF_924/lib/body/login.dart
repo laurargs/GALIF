@@ -17,6 +17,7 @@ class _LoginState extends State<Login> {
     return Scaffold(
       backgroundColor: const Color(0xFFF25305),
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: const Color(0xFFF4DE9C),
         toolbarHeight: 120,
         // actions: [
@@ -37,51 +38,19 @@ class _LoginState extends State<Login> {
         ),
       ),
       body: 
-        Container(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                TextFormField(
-                  decoration: InputDecoration(
-                    labelText: 'NOME DE USUÁRIO:',
-                    labelStyle: TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFFF4DE9C),
-                    ),
-                    enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                      color: Color(0xFFF4DE9C),
-                      width: 2,
-                    )),
+        SingleChildScrollView(
+          child: Container(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    height: MediaQuery.of(context).size.width * 0.1,
                   ),
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.width * 0.1,
-                ),
-                TextFormField(
-                  decoration: InputDecoration(
-                    labelText: 'E-MAIL:',
-                    hintText: 'Ex: email@email.com',
-                    labelStyle: TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFFF4DE9C),
-                    ),
-                    enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                      color: Color(0xFFF4DE9C),
-                      width: 2,
-                    )),
-                  ),
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.width * 0.1,
-                ),
-                TextFormField(
-                  decoration: InputDecoration(
-                      labelText: 'SENHA:',
+                  TextFormField(
+                    decoration: InputDecoration(
+                      labelText: 'E-MAIL:',
+                      hintText: 'Ex: email@email.com',
                       labelStyle: TextStyle(
                         fontSize: 17,
                         fontWeight: FontWeight.bold,
@@ -91,58 +60,60 @@ class _LoginState extends State<Login> {
                           borderSide: BorderSide(
                         color: Color(0xFFF4DE9C),
                         width: 2,
-                      ))),
-                  keyboardType: TextInputType.text,
-                  onFieldSubmitted: (value) {},
-                  obscureText: true,
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.width * 0.1,
-                ),
-                const SizedBox(height: 3),
-                TextFormField(
-                  decoration: InputDecoration(
-                    labelText: 'CONFIRMAR SENHA:',
-                    labelStyle: TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFFF4DE9C),
-                    ),
-                    enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                      color: Color(0xFFF4DE9C),
-                      width: 2,
-                    )),
-                  ),
-                  keyboardType: TextInputType.text,
-                  onFieldSubmitted: (value) {},
-                  obscureText: true,
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.width * 0.1,
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                  Navigator.pushNamed(context, "HomePage");
-                },
-                  child: const Text(
-                    'LOGIN',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF571F04),
+                      )),
                     ),
                   ),
-                  style: ElevatedButton.styleFrom(
-                    primary: Color(0xFFF4DE9C),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.width * 0.1,
+                  ),
+                  TextFormField(
+                    decoration: InputDecoration(
+                        labelText: 'SENHA:',
+                        labelStyle: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFFF4DE9C),
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                          color: Color(0xFFF4DE9C),
+                          width: 2,
+                        ))),
+                    keyboardType: TextInputType.text,
+                    onFieldSubmitted: (value) {},
+                    obscureText: true,
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.width * 0.1,
+                  ),
+                  const SizedBox(height: 3),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.width * 0.1,
+                  ),
+                  
+                  ElevatedButton(
+                    onPressed: () {
+                    Navigator.pushNamed(context, "HomePage");
+                  },
+                    child: const Text(
+                      'LOGIN',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF571F04),
+                      ),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xFFF4DE9C),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
+        ),
       
     );
   }

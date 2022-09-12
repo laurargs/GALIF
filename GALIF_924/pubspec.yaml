@@ -59,12 +59,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/image/bottom_calendário.png
-    - assets/image/bottom_add.png
-    - assets/image/bottom_grafico.png
-    - assets/image/bottom_alimentacao.png
-    - assets/image/bottom_limpeza.png
-    - assets/image/bottom_coletar.png
+    - assets/image/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

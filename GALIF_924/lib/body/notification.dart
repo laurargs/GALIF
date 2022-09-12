@@ -5,32 +5,25 @@ class Notificacao extends StatefulWidget {
 
   @override
   State<Notificacao> createState() => _NotificacaoState();
-  // List<String> avisos = ["cotelar ovos", "Seu dia de limpeza é amanhã!!","atualização do peso das galinha"];
-  // List<String> mensagem = ["o ninho 1 atingiu a menta de ovos para consumo", "remover bosta das galinha","Sua galinha afilhada aumentou 30% de massa"];
-  // //List<DateTime> hora = ["12:23",]
-  // List<String> hora = ["12:28","10;40","02:39"];
-
 }
 
 class _NotificacaoState extends State<Notificacao> {
   List<String> avisos = ["cotelar ovos", "Seu dia de limpeza é amanhã!!","Atualização do peso das galinha"];
   List<String> mensagem = ["o ninho 1 atingiu a menta de ovos para consumo", "remover bosta das galinha","Sua galinha afilhada aumentou 30% de massa"];
-  //List<DateTime> hora = ["12:23",]
   List<String> hora = ["12:28","10:40","02:39"];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        //SizedBox (width: 5),
-        //width: 0,
+        padding: const EdgeInsets.all(16.0),
         color: const Color(0xFFF25305),
         child: ListView.builder(
           itemCount: avisos.length,
           itemBuilder: (context, index){
             return ListTile(
-              shape: Border(bottom: BorderSide(),),
-              leading: CircleAvatar(child: Text(avisos[index][0]),),
+              shape: Border(bottom: BorderSide()),
+              leading: CircleAvatar(child: Text(avisos[index][0]), backgroundColor: Color(0xFF571F04), foregroundColor: Colors.white,),
               title: Text(avisos[index], 
               style: TextStyle( fontSize: 16.0, fontWeight: FontWeight.bold, color: Color(0xFF571F04),),
               ),
@@ -40,7 +33,6 @@ class _NotificacaoState extends State<Notificacao> {
               trailing: Text(hora[index],
               style: TextStyle( fontSize: 11.0, color: Color.fromARGB(255, 241, 149, 103),),
               ),
-              //trailing: Text(hora[index] toString()),
             );
            }
           ),

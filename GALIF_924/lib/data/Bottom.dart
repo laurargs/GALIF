@@ -27,5 +27,9 @@ class Bottom {
       imagem: //imagem do bottom coletar
           'assets/image/bottom_coletar.png',
     ),
+    NewPath(
+      imagem: //imagem do icone
+          'assets/image/Logo1.png',
+    ),
   ];
 }
