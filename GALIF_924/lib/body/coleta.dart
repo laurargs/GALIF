@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class coleta extends StatefulWidget {
-  const coleta({Key? key}) : super(key: key);
+class Coleta extends StatefulWidget {
+  const Coleta({Key? key}) : super(key: key);
 
   @override
-  State<coleta> createState() => _NotificacaoState();
+  State<Coleta> createState() => _ColetaState();
 }
 
-class _NotificacaoState extends State<coleta> {
+class _ColetaState extends State<Coleta> {
   @override
   Widget build(BuildContext context) {
     return Padding(

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Notificacao extends StatefulWidget {
-  const Notificacao({Key? key}) : super(key: key);
+class Controle extends StatefulWidget {
+  const Controle({Key? key}) : super(key: key);
 
   @override
-  State<Notificacao> createState() => _NotificacaoState();
+  State<Controle> createState() => _ControleState();
 }
 
-class _NotificacaoState extends State<Notificacao> {
+class _ControleState extends State<Controle> {
   @override
   Widget build(BuildContext context) {
     return Padding(

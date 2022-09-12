@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class limpeza extends StatefulWidget {
-  const limpeza({Key? key}) : super(key: key);
+class Limpeza extends StatefulWidget {
+  const Limpeza({Key? key}) : super(key: key);
 
   @override
-  State<limpeza> createState() => _NotificacaoState();
+  State<Limpeza> createState() => _LimpezaState();
 }
 
-class _NotificacaoState extends State<limpeza> {
+class _LimpezaState extends State<Limpeza> {
   @override
   Widget build(BuildContext context) {
     return Padding(

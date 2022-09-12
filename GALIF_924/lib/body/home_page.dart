@@ -9,7 +9,7 @@ import 'package:GALIF_924/body/calendario.dart';
 
 import 'package:flutter/material.dart';
 
-class HomePage extends StafulWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override

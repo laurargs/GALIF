@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class alimenta extends StatefulWidget {
-  const alimenta({Key? key}) : super(key: key);
+class Alimenta extends StatefulWidget {
+  const Alimenta({Key? key}) : super(key: key);
 
   @override
-  State<alimenta> createState() => _NotificacaoState();
+  State<Alimenta> createState() => _AlimentaState();
 }
 
-class _NotificacaoState extends State<alimenta> {
+class _AlimentaState extends State<Alimenta> {
   @override
   Widget build(BuildContext context) {
     return Padding(
