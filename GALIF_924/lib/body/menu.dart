@@ -1,5 +1,5 @@
 import 'package:GALIF_924/data/BD.dart';
-import 'package:GALIF_924/domain/pacote_turistico.dart';
+import 'package:GALIF_924/domain/variaveis_galinhas.dart';
 import 'package:flutter/material.dart';
 
 class Menu extends StatefulWidget {

@@ -1,19 +1,19 @@
-import 'package:GALIF_924/domain/pacote_turistico.dart';
+import 'package:GALIF_924/domain/variaveis_galinhas.dart';
 import 'package:flutter/material.dart';
 
-class PacoteDetalhes extends StatefulWidget {
+class galinhas_detalhes extends StatefulWidget {
   final PacoteTuristico pacoteTuristico;
 
-  const PacoteDetalhes({
+  const galinhas_detalhes({
     Key? key,
     required this.pacoteTuristico,
   }) : super(key: key);
 
   @override
-  _PacoteDetalhesState createState() => _PacoteDetalhesState();
+  _galinhas_detalhesState createState() => _galinhas_detalhesState();
 }
 
-class _PacoteDetalhesState extends State<PacoteDetalhes> {
+class _galinhas_detalhesState extends State<galinhas_detalhes> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

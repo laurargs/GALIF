@@ -1,5 +1,5 @@
-import 'package:GALIF_924/domain/pacote_turistico.dart';
-import 'package:GALIF_924/body/pacote_detalhes.dart';
+import 'package:GALIF_924/domain/variaveis_galinhas.dart';
+import 'package:GALIF_924/body/galinhas_detalhes.dart';
 import 'package:flutter/material.dart';
 
 class CardPacoteTuristico extends StatefulWidget {
@@ -23,7 +23,7 @@ class _CardPacoteTuristicoState extends State<CardPacoteTuristico> {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return PacoteDetalhes(
+              return galinhas_detalhes(
                 pacoteTuristico: widget.pacoteTuristico,
               );
             },
@@ -78,4 +78,3 @@ class _CardPacoteTuristicoState extends State<CardPacoteTuristico> {
     );
   }
 }
-
