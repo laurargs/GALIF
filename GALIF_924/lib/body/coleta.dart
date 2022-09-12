@@ -1,3 +1,6 @@
+import 'package:GALIF_924/body/gridview_page.dart';
+import 'package:GALIF_924/body/menu.dart';
+import 'package:GALIF_924/body/notification.dart';
 import 'package:flutter/material.dart';
 
 class Coleta extends StatefulWidget {
@@ -8,25 +11,75 @@ class Coleta extends StatefulWidget {
 }
 
 class _ColetaState extends State<Coleta> {
+  int _indiceAtual = 1;
+  List body = const [
+    Notificacao(),
+    Menu(),
+    GridViewPage(),
+  ];
+  
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(20.0),
+    return Scaffold(
+      backgroundColor: const Color(0xFFF25305),
+      appBar: AppBar(
+        backgroundColor: const Color(0xFFF4DE9C),
+        toolbarHeight: 120,
+        title: Text(
+          "    GALIF",
+          style: TextStyle(
+            fontSize: 32.0,
+            fontWeight: FontWeight.bold,
+            color: Color(0xFF571F04),
+          ),
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(59),
+          ),
+        ),
+      ),
 
-       child: ListView.builder(
-        shrinkWrap: true,
-        itemCount: 15,
-        itemBuilder: (BuildContext context, int index) {
-          return ListTile(
-            title: Text("caletar " + "${index + 1}"),
-            trailing: const Icon(Icons.chevron_right),
-          );
-         },     
-       )
+
+      body:
+        Container(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text("Coleta")
+              ],
+            ),
+          ),
+
+
+      bottomNavigationBar: BottomNavigationBar(
+        showSelectedLabels: false, //retirar label
+        showUnselectedLabels: false, //retirar label ao ser selecionada
+        backgroundColor:
+            const Color(0xFFF4DE9C), //cor da barra do BottomNavigationBar
+        currentIndex: _indiceAtual,
+        onTap: onTabTapped, //ação ao clicar no icone
+        items: [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.add_alert, size: 40, color: Color.fromARGB(255, 104, 78, 65)), label: "", activeIcon: Icon(Icons.add_alert, color: Color(0xFF571F04), size: 40),
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.warehouse_outlined, size: 40, color: Color.fromARGB(255, 104, 78, 65)), label: "", activeIcon: Icon(Icons.warehouse_outlined, color: Color(0xFF571F04), size: 40),
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person, size: 40, color: Color.fromARGB(255, 104, 78, 65)), label: "", activeIcon: Icon(Icons.person, color: Color(0xFF571F04), size: 40),
+          ),
+  
+        ],
+      ),
     );
-
   }
 
-  void onPressedButton() {
+  void onTabTapped(int index) {
+    //colocar a ação que será feita ao clicar nos botões
+    setState(() {
+      _indiceAtual = index;
+    });
+  }   
   }
-}

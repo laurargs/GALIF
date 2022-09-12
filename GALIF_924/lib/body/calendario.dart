@@ -108,7 +108,6 @@ class _CalendarioState extends State<Calendario> {
           BottomNavigationBarItem(
               icon: Icon(Icons.person, size: 40, color: Color.fromARGB(255, 104, 78, 65)), label: "", activeIcon: Icon(Icons.person, color: Color(0xFF571F04), size: 40),
           ),
-  
         ],
       ),
     );

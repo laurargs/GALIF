@@ -42,7 +42,7 @@ class _MenuState extends State<Menu> {
           padding: const EdgeInsets.all(20.0),
           child: ElevatedButton(
             onPressed: () {
-              Navigator.pushNamed(context, "Inserir");
+              Navigator.pushNamed(context, "TelaInserir");
             },
             child: Image.asset(listNewPath[1].imagem),
             style: ElevatedButton.styleFrom(
@@ -58,7 +58,7 @@ class _MenuState extends State<Menu> {
           padding: const EdgeInsets.all(20.0),
           child: ElevatedButton(
             onPressed: () {
-              Navigator.pushNamed(context, "Gráfico");
+              Navigator.pushNamed(context, "Controle");
             },
             child: Image.asset(listNewPath[2].imagem),
             style: ElevatedButton.styleFrom(
@@ -74,7 +74,7 @@ class _MenuState extends State<Menu> {
           padding: const EdgeInsets.all(20.0),
           child: ElevatedButton(
             onPressed: () {
-              Navigator.pushNamed(context, "Alimentacao");
+              Navigator.pushNamed(context, "Alimenta");
             },
             child: Image.asset(listNewPath[3].imagem),
             style: ElevatedButton.styleFrom(
