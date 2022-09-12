@@ -18,15 +18,12 @@ class _NotificacaoState extends State<Notificacao> {
         itemCount: 15,
         itemBuilder: (BuildContext context, int index) {
           return ListTile(
-            title: Text("Notificação " + "${index + 1}"),
+            shape: Border(bottom: BorderSide(),),
+            title: Text("Notificação " + "${index + 1}", style: TextStyle(fontWeight: FontWeight.bold)),
             trailing: const Icon(Icons.chevron_right),
           );
          },     
        )
     );
-
-  }
-
-  void onPressedButton() {
   }
 }
