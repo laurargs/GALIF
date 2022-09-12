@@ -31,6 +31,7 @@ class _CardPacoteTuristicoState extends State<CardPacoteTuristico> {
         );
       },
       child: Card(
+        color: Color(0xFF713112),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8),
         ),
@@ -45,7 +46,11 @@ class _CardPacoteTuristicoState extends State<CardPacoteTuristico> {
                 children: [
                   Text(
                     widget.pacoteTuristico.nome,
-                    style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 21,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 255, 255, 255),
+                    ),
                   ),
                 ],
               ),
@@ -73,3 +78,4 @@ class _CardPacoteTuristicoState extends State<CardPacoteTuristico> {
     );
   }
 }
+
