@@ -18,3 +18,18 @@ Projeto das aulas da disciplina de Programação Móvel da turma 924 - IFAL - ca
    
 ## Colocar as dependencias do flutter (Antes acesse a pasta GALIF_924)
 ``flutter pub get``
+
+2. Execute o comando e digite: `git pull origin master`
+   </br>
+
+## Adicionar texto
+
+   Text(
+                  'NOME DE USUÁRIO:',
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFFF4DE9C),
+                  ),
+                ),
+
