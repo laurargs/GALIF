@@ -45,6 +45,7 @@ class _CalendarioState extends State<Calendario> {
       body: Center(child: Form(  
         child: Column(
           children: <Widget>[
+            SizedBox(height: 20),
             Text(
               "CALENDÁRIO",
               style: TextStyle(
