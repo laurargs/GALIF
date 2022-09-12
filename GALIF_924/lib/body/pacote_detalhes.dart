@@ -22,7 +22,7 @@ class _PacoteDetalhesState extends State<PacoteDetalhes> {
         children: [
           Image.network(widget.pacoteTuristico.imagem),
           Padding(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.all(16.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -41,9 +41,7 @@ class _PacoteDetalhesState extends State<PacoteDetalhes> {
                     fontSize: 15,
                   ),
                 ),
-                
                 const SizedBox(height: 8),
-                
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -57,18 +55,16 @@ class _PacoteDetalhesState extends State<PacoteDetalhes> {
                     ),
                     const SizedBox(width: 24),
                     Text(
-                  widget.pacoteTuristico.especie,
-                  style: const TextStyle(
-                    fontSize: 16,
-                  ),
-                ),
+                      widget.pacoteTuristico.especie,
+                      style: const TextStyle(
+                        fontSize: 16,
+                      ),
+                    ),
                   ],
                 ),
-
               ],
             ),
           ),
-
         ],
       ),
     );
