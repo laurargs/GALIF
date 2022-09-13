@@ -24,4 +24,5 @@ class Individuos {
   NewPath({
     required this.imagem,
   });
+
 }

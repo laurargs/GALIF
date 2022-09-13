@@ -70,7 +70,7 @@ class _Card_GalinhasState extends State<Card_Galinhas> {
         color: Colors.amber,
         height: 180,
         width: double.infinity,
-        child: Image.network(
+        child: Image.asset(
           imagem,
           fit: BoxFit.cover,
         ),

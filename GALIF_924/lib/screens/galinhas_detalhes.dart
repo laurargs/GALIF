@@ -20,7 +20,7 @@ class _galinhas_detalhesState extends State<galinhas_detalhes> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.network(widget.individuos.imagem),
+          Image.asset(widget.individuos.imagem),
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(
