@@ -1,6 +1,3 @@
-import 'package:GALIF_924/screens/gridview_page.dart';
-import 'package:GALIF_924/screens/menu.dart';
-import 'package:GALIF_924/screens/notification.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -11,7 +8,6 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,9 +16,6 @@ class _LoginState extends State<Login> {
         automaticallyImplyLeading: false,
         backgroundColor: const Color(0xFFF4DE9C),
         toolbarHeight: 120,
-        // actions: [
-        //   Icon(Icons.arrow_back_sharp, color: Color(0xFF571F04), size: 45),
-        // ],
         title: Text(
           "    GALIF",
           style: TextStyle(
@@ -37,84 +30,96 @@ class _LoginState extends State<Login> {
           ),
         ),
       ),
-      body: 
-        SingleChildScrollView(
-          child: Container(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    height: MediaQuery.of(context).size.width * 0.1,
-                  ),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      labelText: 'E-MAIL:',
-                      hintText: 'Ex: email@email.com',
-                      labelStyle: TextStyle(
-                        fontSize: 17,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xFFF4DE9C),
-                      ),
-                      enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                        color: Color(0xFFF4DE9C),
-                        width: 2,
-                      )),
-                    ),
-                  ),
-                  SizedBox(
-                    height: MediaQuery.of(context).size.width * 0.1,
-                  ),
-                  TextFormField(
-                    decoration: InputDecoration(
-                        labelText: 'SENHA:',
-                        labelStyle: TextStyle(
-                          fontSize: 17,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFFF4DE9C),
-                        ),
-                        enabledBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                          color: Color(0xFFF4DE9C),
-                          width: 2,
-                        ))),
-                    keyboardType: TextInputType.text,
-                    onFieldSubmitted: (value) {},
-                    obscureText: true,
-                  ),
-                  SizedBox(
-                    height: MediaQuery.of(context).size.width * 0.1,
-                  ),
-                  const SizedBox(height: 3),
-                  SizedBox(
-                    height: MediaQuery.of(context).size.width * 0.1,
-                  ),
-                  
-                  ElevatedButton(
-                    onPressed: () {
-                    Navigator.pushNamed(context, "HomePage");
-                  },
-                    child: const Text(
-                      'LOGIN',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xFF571F04),
-                      ),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      primary: Color(0xFFF4DE9C),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                    ),
-                  ),
-                ],
+      body: SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.all(24),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: MediaQuery.of(context).size.width * 0.1,
               ),
-            ),
+              TextFormField(
+                decoration: InputDecoration(
+                  labelText: 'E-MAIL:',
+                  hintText: 'Ex: email@email.com',
+                  labelStyle: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFFF4DE9C),
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                    color: Color(0xFFF4DE9C),
+                    width: 2,
+                  )),
+                ),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.width * 0.1,
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                    labelText: 'SENHA:',
+                    labelStyle: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFFF4DE9C),
+                    ),
+                    enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                      color: Color(0xFFF4DE9C),
+                      width: 2,
+                    ))),
+                keyboardType: TextInputType.text,
+                onFieldSubmitted: (value) {},
+                obscureText: true,
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.width * 0.1,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, "HomePage");
+                },
+                style: ElevatedButton.styleFrom(
+                  primary: const Color(0xFFF4DE9C),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                ),
+                child: const Text(
+                  'LOGIN',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF571F04),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.width * 0.025,
+              ),
+              Text(
+                "Ainda não tem uma conta?",
+                style: TextStyle(color: Color(0xFFF4DE9C)),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.width * 0.015,
+              ),
+              InkWell(
+                onTap: (() {
+                  Navigator.pushNamed(context, "Cadastro");
+                }),
+                child: const Text(
+                  "Cadastre-se",
+                  style: TextStyle(fontSize: 18, color: Color(0xFF571F04)),
+                ),
+              )
+            ],
+          ),
         ),
-      
+      ),
     );
   }
 }

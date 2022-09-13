@@ -1,5 +1,3 @@
-import 'package:GALIF_924/screens/login.dart';
-import 'package:GALIF_924/screens/cadastro.dart';
 import 'package:GALIF_924/data/Bottom.dart';
 import 'package:GALIF_924/domain/variaveis_galinhas.dart';
 import 'package:flutter/material.dart';
@@ -15,41 +13,16 @@ class _InicioState extends State<Inicio> {
   List<NewPath> lista = Bottom.listabottom;
   @override
   Widget build(BuildContext context) {
+    pushLogin();
     return Container(
-      color: Colors.orange,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Image.asset(lista[6].imagem, width: 200),
-          ElevatedButton(
-            onPressed: (){
-            Navigator.pushNamed(context, "Login");
-            },
-            child: Text('Login', style: TextStyle(color: Colors.black, fontSize: 25)),
-            style: ElevatedButton.styleFrom(
-              primary: const Color(0xFFF4DE9C),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-              ),
-              fixedSize: Size.fromRadius(70),
-            ),
-          ),
-          ElevatedButton(
-            onPressed: (){
-            Navigator.pushNamed(context, "Cadastro");
-            },
-            child: Text('Cadastro', style: TextStyle(color: Colors.black, fontSize: 25),),
-            style: ElevatedButton.styleFrom(
-              primary: const Color(0xFFF4DE9C),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-              ),
-              fixedSize: Size.fromRadius(70),
-            ),
-          ),
-        ],
-      ),
+      color: const Color(0xFFF25305),
+      child: Center(child: Image.asset(lista[6].imagem, width: 200)),
     );
   }
-  void onPressedButton() {}
+
+  void pushLogin() {
+    Future.delayed(const Duration(seconds: 4), () {
+      Navigator.pushNamed(context, "Login");
+    });
+  }
 }
