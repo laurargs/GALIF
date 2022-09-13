@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-class PacoteTuristico {
+class Individuos {
   final String imagem;
   final String nome;
   final String peso;
@@ -8,7 +8,7 @@ class PacoteTuristico {
   final String especie;
 
 
-  PacoteTuristico({
+  Individuos({
     required this.imagem,
     required this.nome,
     required this.peso,

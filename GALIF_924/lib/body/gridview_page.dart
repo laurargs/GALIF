@@ -11,7 +11,7 @@ class GridViewPage extends StatefulWidget {
 }
 
 class _GridViewPageState extends State<GridViewPage> {
-  List<PacoteTuristico> list = BD.lista;
+  List<Individuos> list = BD.lista;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class _GridViewPageState extends State<GridViewPage> {
       itemCount: list.length,
       itemBuilder: (context, index) {
         return Card_Galinhas(
-          pacoteTuristico: list[index],
+          individuos: list[index],
         );
       },
     );

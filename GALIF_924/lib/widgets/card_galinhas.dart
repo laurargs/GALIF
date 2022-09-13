@@ -3,11 +3,11 @@ import 'package:GALIF_924/body/galinhas_detalhes.dart';
 import 'package:flutter/material.dart';
 
 class Card_Galinhas extends StatefulWidget {
-  final PacoteTuristico pacoteTuristico;
+  final Individuos individuos;
 
   const Card_Galinhas({
     Key? key,
-    required this.pacoteTuristico,
+    required this.individuos,
   }) : super(key: key);
 
   @override
@@ -24,7 +24,7 @@ class _Card_GalinhasState extends State<Card_Galinhas> {
           MaterialPageRoute(
             builder: (context) {
               return galinhas_detalhes(
-                pacoteTuristico: widget.pacoteTuristico,
+                individuos: widget.individuos,
               );
             },
           ),
@@ -38,14 +38,14 @@ class _Card_GalinhasState extends State<Card_Galinhas> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            buildImage(widget.pacoteTuristico.imagem),
+            buildImage(widget.individuos.imagem),
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    widget.pacoteTuristico.nome,
+                    widget.individuos.nome,
                     style: TextStyle(
                       fontSize: 21,
                       fontWeight: FontWeight.bold,

@@ -2,11 +2,11 @@ import 'package:GALIF_924/domain/variaveis_galinhas.dart';
 import 'package:flutter/material.dart';
 
 class galinhas_detalhes extends StatefulWidget {
-  final PacoteTuristico pacoteTuristico;
+  final Individuos individuos;
 
   const galinhas_detalhes({
     Key? key,
-    required this.pacoteTuristico,
+    required this.individuos,
   }) : super(key: key);
 
   @override
@@ -20,7 +20,7 @@ class _galinhas_detalhesState extends State<galinhas_detalhes> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.network(widget.pacoteTuristico.imagem),
+          Image.network(widget.individuos.imagem),
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(
@@ -28,7 +28,7 @@ class _galinhas_detalhesState extends State<galinhas_detalhes> {
               children: [
                 const SizedBox(height: 11),
                 Text(
-                  widget.pacoteTuristico.nome,
+                  widget.individuos.nome,
                   style: const TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.w600,
@@ -36,7 +36,7 @@ class _galinhas_detalhesState extends State<galinhas_detalhes> {
                 ),
                 const SizedBox(height: 11),
                 Text(
-                  widget.pacoteTuristico.especie,
+                  widget.individuos.especie,
                   style: const TextStyle(
                     fontSize: 17,
                   ),
@@ -47,7 +47,7 @@ class _galinhas_detalhesState extends State<galinhas_detalhes> {
                   children: [
                     Expanded(
                       child: Text(
-                        widget.pacoteTuristico.semanas,
+                        widget.individuos.semanas,
                         style: const TextStyle(
                           fontSize: 20,
                         ),
@@ -55,7 +55,7 @@ class _galinhas_detalhesState extends State<galinhas_detalhes> {
                     ),
                     const SizedBox(width: 24),
                     Text(
-                      "Peso: ${widget.pacoteTuristico.peso}",
+                      "Peso: ${widget.individuos.peso}",
                       style: const TextStyle(
                         fontSize: 20,
                       ),
