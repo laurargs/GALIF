@@ -33,7 +33,6 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: const Color(0xFFF25305),
       appBar: AppBar(
-        leading: BackButton(color: Color(0xFF571F04)),
         backgroundColor: const Color(0xFFF4DE9C),
         toolbarHeight: 120,
         title: Text(
