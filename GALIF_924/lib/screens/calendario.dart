@@ -1,6 +1,6 @@
-import 'package:GALIF_924/screens/gridview_page.dart';
-import 'package:GALIF_924/screens/menu.dart';
-import 'package:GALIF_924/screens/notification.dart';
+import 'package:GALIF_924/body/gridview_page.dart';
+import 'package:GALIF_924/body/menu.dart';
+import 'package:GALIF_924/body/notification.dart';
 import 'package:flutter/material.dart';
 
 class Calendario extends StatefulWidget {
@@ -23,6 +23,7 @@ class _CalendarioState extends State<Calendario> {
     return Scaffold(
       backgroundColor: const Color(0xFFF25305),
       appBar: AppBar(
+        leading: BackButton(color: Color(0xFF571F04)),
         backgroundColor: const Color(0xFFF4DE9C),
         toolbarHeight: 120,
         title: Text(
