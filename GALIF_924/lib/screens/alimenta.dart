@@ -1,16 +1,16 @@
-import 'package:GALIF_924/body/gridview_page.dart';
-import 'package:GALIF_924/body/menu.dart';
-import 'package:GALIF_924/body/notification.dart';
+import 'package:GALIF_924/screens/gridview_page.dart';
+import 'package:GALIF_924/screens/menu.dart';
+import 'package:GALIF_924/screens/notification.dart';
 import 'package:flutter/material.dart';
 
-class Coleta extends StatefulWidget {
-  const Coleta({Key? key}) : super(key: key);
+class Alimenta extends StatefulWidget {
+  const Alimenta({Key? key}) : super(key: key);
 
   @override
-  State<Coleta> createState() => _ColetaState();
+  State<Alimenta> createState() => _AlimentaState();
 }
 
-class _ColetaState extends State<Coleta> {
+class _AlimentaState extends State<Alimenta> {
   int _indiceAtual = 1;
   List body = const [
     Notificacao(),
@@ -48,7 +48,7 @@ class _ColetaState extends State<Coleta> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text("Coleta")
+                Text("Alimentação")
               ],
             ),
           ),

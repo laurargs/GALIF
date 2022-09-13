@@ -1,5 +1,5 @@
 import 'package:GALIF_924/domain/variaveis_galinhas.dart';
-import 'package:GALIF_924/body/galinhas_detalhes.dart';
+import 'package:GALIF_924/screens/galinhas_detalhes.dart';
 import 'package:flutter/material.dart';
 
 class Card_Galinhas extends StatefulWidget {

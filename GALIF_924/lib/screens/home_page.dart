@@ -1,11 +1,11 @@
-import 'package:GALIF_924/body/cadastro.dart';
-import 'package:GALIF_924/body/calendario.dart';
-import 'package:GALIF_924/body/gridview_page.dart';
-import 'package:GALIF_924/body/login.dart';
-import 'package:GALIF_924/body/menu.dart';
-import 'package:GALIF_924/body/notification.dart';
-import 'package:GALIF_924/body/tela_inserir.dart';
-import 'package:GALIF_924/body/calendario.dart';
+import 'package:GALIF_924/screens/cadastro.dart';
+import 'package:GALIF_924/screens/calendario.dart';
+import 'package:GALIF_924/screens/gridview_page.dart';
+import 'package:GALIF_924/screens/login.dart';
+import 'package:GALIF_924/screens/menu.dart';
+import 'package:GALIF_924/screens/notification.dart';
+import 'package:GALIF_924/screens/tela_inserir.dart';
+import 'package:GALIF_924/screens/calendario.dart';
 
 import 'package:flutter/material.dart';
 

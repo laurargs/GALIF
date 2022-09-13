@@ -1,16 +1,16 @@
-import 'package:GALIF_924/body/alimenta.dart';
-import 'package:GALIF_924/body/cadastro.dart';
-import 'package:GALIF_924/body/calendario.dart';
-import 'package:GALIF_924/body/coleta.dart';
-import 'package:GALIF_924/body/controle.dart';
-import 'package:GALIF_924/body/gridview_page.dart';
-import 'package:GALIF_924/body/home_page.dart';
-import 'package:GALIF_924/body/inicio.dart';
-import 'package:GALIF_924/body/limpeza.dart';
-import 'package:GALIF_924/body/login.dart';
-import 'package:GALIF_924/body/menu.dart';
-import 'package:GALIF_924/body/notification.dart';
-import 'package:GALIF_924/body/tela_inserir.dart';
+import 'package:GALIF_924/screens/alimenta.dart';
+import 'package:GALIF_924/screens/cadastro.dart';
+import 'package:GALIF_924/screens/calendario.dart';
+import 'package:GALIF_924/screens/coleta.dart';
+import 'package:GALIF_924/screens/controle.dart';
+import 'package:GALIF_924/screens/gridview_page.dart';
+import 'package:GALIF_924/screens/home_page.dart';
+import 'package:GALIF_924/screens/inicio.dart';
+import 'package:GALIF_924/screens/limpeza.dart';
+import 'package:GALIF_924/screens/login.dart';
+import 'package:GALIF_924/screens/menu.dart';
+import 'package:GALIF_924/screens/notification.dart';
+import 'package:GALIF_924/screens/tela_inserir.dart';
 import 'package:flutter/material.dart';
 
 void main() {
