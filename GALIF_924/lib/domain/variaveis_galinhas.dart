@@ -7,22 +7,21 @@ class Individuos {
   final String semanas;
   final String especie;
 
-
   Individuos({
     required this.imagem,
     required this.nome,
     required this.peso,
     required this.semanas,
     required this.especie,
-    
   });
-
 }
-  class NewPath {
+
+class NewPath {
   final String imagem;
+  final String rota;
 
   NewPath({
     required this.imagem,
+    this.rota = '',
   });
-
 }
