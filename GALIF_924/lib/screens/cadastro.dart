@@ -119,7 +119,7 @@ class _CadastroState extends State<Cadastro> {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, "Inicio");
+                Navigator.pushNamed(context, "Login");
               },
               child: const Text(
                 'CADASTRAR',

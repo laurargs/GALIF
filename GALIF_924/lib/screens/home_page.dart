@@ -21,10 +21,6 @@ class _HomePageState extends State<HomePage> {
   List body = const [
     Notificacao(),
     Menu(),
-    //TelaDeInserir(),
-    //Login(),
-    //Cadastro(),
-    //Calendario(),
     GridViewPage(),
   ];
 
@@ -33,6 +29,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: const Color(0xFFF25305),
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: const Color(0xFFF4DE9C),
         toolbarHeight: 120,
         title: Text(
