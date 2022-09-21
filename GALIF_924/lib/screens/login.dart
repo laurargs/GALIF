@@ -80,7 +80,7 @@ class _LoginState extends State<Login> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, "HomePage");
+                  Navigator.pushReplacementNamed(context, "HomePage");
                 },
                 style: ElevatedButton.styleFrom(
                   primary: const Color(0xFFF4DE9C),

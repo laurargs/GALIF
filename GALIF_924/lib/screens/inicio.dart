@@ -22,7 +22,7 @@ class _InicioState extends State<Inicio> {
 
   void pushLogin() {
     Future.delayed(const Duration(seconds: 4), () {
-      Navigator.pushNamed(context, "Login");
+      Navigator.pushReplacementNamed(context, "Login");
     });
   }
 }
