@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.aula_924">
    <application
-        android:label="aula_924"
+        android:label="GALIF"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
