@@ -80,7 +80,7 @@ class _LoginState extends State<Login> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, "HomePage");
+                  Navigator.pushNamed(context, "HomePage");
                 },
                 style: ElevatedButton.styleFrom(
                   primary: const Color(0xFFF4DE9C),
@@ -109,7 +109,7 @@ class _LoginState extends State<Login> {
               ),
               InkWell(
                 onTap: (() {
-                  Navigator.pushNamed(context, "Cadastro");
+                  Navigator.pushReplacementNamed(context, "Cadastro");
                 }),
                 child: const Text(
                   "Cadastre-se",
