@@ -1,11 +1,6 @@
-import 'package:GALIF_924/screens/cadastro.dart';
-import 'package:GALIF_924/screens/calendario.dart';
 import 'package:GALIF_924/screens/gridview_page.dart';
-import 'package:GALIF_924/screens/login.dart';
 import 'package:GALIF_924/screens/menu.dart';
 import 'package:GALIF_924/screens/notification.dart';
-import 'package:GALIF_924/screens/tela_inserir.dart';
-import 'package:GALIF_924/screens/calendario.dart';
 
 import 'package:flutter/material.dart';
 
@@ -32,7 +27,7 @@ class _HomePageState extends State<HomePage> {
         automaticallyImplyLeading: false,
         backgroundColor: const Color(0xFFF4DE9C),
         toolbarHeight: 120,
-        title: Text(
+        title: const Text(
           "    GALIF",
           style: TextStyle(
             fontSize: 32.0,
@@ -40,7 +35,7 @@ class _HomePageState extends State<HomePage> {
             color: Color(0xFF571F04),
           ),
         ),
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(
             bottom: Radius.circular(59),
           ),
