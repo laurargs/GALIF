@@ -32,7 +32,6 @@ void main() {
         "Menu": (context) => const Menu(),
         "Notificacao": (context) => const Notificacao(),
         "TelaInserir": (context) => const TelaDeInserir(),
-
       },
     ),
   );

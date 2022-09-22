@@ -17,7 +17,7 @@ class _MenuState extends State<Menu> {
       padding: const EdgeInsets.all(41),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
       crossAxisCount: 2,
-      childAspectRatio: 1.29,
+      childAspectRatio: 0.9,
       crossAxisSpacing: 34,  
       mainAxisSpacing: 34,
       ),
