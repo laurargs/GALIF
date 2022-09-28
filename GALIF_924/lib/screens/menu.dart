@@ -39,6 +39,4 @@ class _MenuState extends State<Menu> {
       },
     );
   }
-
-  void onPressedButton() {}
 }

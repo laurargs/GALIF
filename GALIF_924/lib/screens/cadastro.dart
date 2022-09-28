@@ -19,7 +19,7 @@ class _CadastroState extends State<Cadastro> {
         automaticallyImplyLeading: false,
         backgroundColor: const Color(0xFFF4DE9C),
         toolbarHeight: 120,
-        title: Text(
+        title: const Text(
           "    GALIF",
           style: TextStyle(
             fontSize: 32.0,
@@ -27,7 +27,7 @@ class _CadastroState extends State<Cadastro> {
             color: Color(0xFF571F04),
           ),
         ),
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(
             bottom: Radius.circular(59),
           ),
@@ -39,7 +39,7 @@ class _CadastroState extends State<Cadastro> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'NOME DE USUÁRIO:',
                 labelStyle: TextStyle(
                   fontSize: 17,
@@ -57,7 +57,7 @@ class _CadastroState extends State<Cadastro> {
               height: MediaQuery.of(context).size.width * 0.1,
             ),
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'E-MAIL:',
                 hintText: 'Ex: email@email.com',
                 labelStyle: TextStyle(
@@ -76,7 +76,7 @@ class _CadastroState extends State<Cadastro> {
               height: MediaQuery.of(context).size.width * 0.1,
             ),
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                   labelText: 'SENHA:',
                   labelStyle: TextStyle(
                     fontSize: 17,
@@ -97,7 +97,7 @@ class _CadastroState extends State<Cadastro> {
             ),
             const SizedBox(height: 3),
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'CONFIRMAR SENHA:',
                 labelStyle: TextStyle(
                   fontSize: 17,
@@ -121,18 +121,18 @@ class _CadastroState extends State<Cadastro> {
               onPressed: () {
                 Navigator.pushNamed(context, "Login");
               },
+              style: ElevatedButton.styleFrom(
+                primary: Color(0xFFF4DE9C),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16),
+                ),
+              ),
               child: const Text(
                 'CADASTRAR',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Color(0xFF571F04),
-                ),
-              ),
-              style: ElevatedButton.styleFrom(
-                primary: Color(0xFFF4DE9C),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
                 ),
               ),
             ),

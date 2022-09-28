@@ -11,7 +11,7 @@ class _NotificacaoState extends State<Notificacao> {
   List<String> avisos = ["cotelar ovos", "Seu dia de limpeza é amanhã!!","Atualização do peso das galinha"];
   List<String> mensagem = ["o ninho 1 atingiu a menta de ovos para consumo", "remover bosta das galinha","Sua galinha afilhada aumentou 30% de massa"];
   List<String> hora = ["12:28","10:40","02:39"];
-  List<Icon> icons = [Icon(Icons.egg_rounded), Icon(Icons.cleaning_services_rounded), Icon(Icons.refresh_rounded)];
+  List<Icon> icons = [const Icon(Icons.egg_rounded), const Icon(Icons.cleaning_services_rounded), const Icon(Icons.refresh_rounded)];
 
   @override
   Widget build(BuildContext context) {
@@ -23,27 +23,27 @@ class _NotificacaoState extends State<Notificacao> {
           itemCount: avisos.length,
           itemBuilder: (context, index){
             return Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                  border: Border(
                    bottom: BorderSide(width: 0.8, color: Color(0xFF571F04)),
                   ),
                 ),
               child: ListTile(
-              leading: CircleAvatar(child: icons[index], backgroundColor: Color(0xFF571F04), foregroundColor: Colors.white,),
-              title: Text(avisos[index], 
-              style: TextStyle( fontSize: 16.0, fontWeight: FontWeight.bold, color: Color(0xFF571F04),),
+                leading: CircleAvatar(child: icons[index], backgroundColor: const Color(0xFF571F04), foregroundColor: Colors.white,),
+                title: Text(avisos[index], 
+                style: const TextStyle( fontSize: 16.0, fontWeight: FontWeight.bold, color: Color(0xFF571F04),),
+                ),
+                subtitle: Text(mensagem[index],
+                style: const TextStyle( fontSize: 13.0, color: Color.fromARGB(255, 82, 50, 34),),
+                ),
+                trailing: Text(hora[index],
+                style: const TextStyle( fontSize: 11.0, color: Color.fromARGB(255, 241, 149, 103),),
+                ),
               ),
-              subtitle: Text(mensagem[index],
-              style: TextStyle( fontSize: 13.0, color: Color.fromARGB(255, 82, 50, 34),),
-              ),
-              trailing: Text(hora[index],
-              style: TextStyle( fontSize: 11.0, color: Color.fromARGB(255, 241, 149, 103),),
-              ),
-              ),
-              );
-           }
-          ),
-       ),
+            );
+          }
+        ),
+      ),
     ); 
   }
 }

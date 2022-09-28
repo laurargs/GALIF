@@ -16,7 +16,7 @@ class _LoginState extends State<Login> {
         automaticallyImplyLeading: false,
         backgroundColor: const Color(0xFFF4DE9C),
         toolbarHeight: 120,
-        title: Text(
+        title: const Text(
           "    GALIF",
           style: TextStyle(
             fontSize: 32.0,
@@ -24,7 +24,7 @@ class _LoginState extends State<Login> {
             color: Color(0xFF571F04),
           ),
         ),
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(
             bottom: Radius.circular(59),
           ),
@@ -40,7 +40,7 @@ class _LoginState extends State<Login> {
                 height: MediaQuery.of(context).size.width * 0.1,
               ),
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'E-MAIL:',
                   hintText: 'Ex: email@email.com',
                   labelStyle: TextStyle(
@@ -59,7 +59,7 @@ class _LoginState extends State<Login> {
                 height: MediaQuery.of(context).size.width * 0.1,
               ),
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     labelText: 'SENHA:',
                     labelStyle: TextStyle(
                       fontSize: 17,
@@ -100,7 +100,7 @@ class _LoginState extends State<Login> {
               SizedBox(
                 height: MediaQuery.of(context).size.width * 0.025,
               ),
-              Text(
+              const Text(
                 "Ainda não tem uma conta?",
                 style: TextStyle(color: Color(0xFFF4DE9C)),
               ),

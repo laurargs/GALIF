@@ -11,22 +11,16 @@ class Alimenta extends StatefulWidget {
 }
 
 class _AlimentaState extends State<Alimenta> {
-  int _indiceAtual = 1;
-  List body = const [
-    Notificacao(),
-    Menu(),
-    GridViewPage(),
-  ];
   
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFF25305),
       appBar: AppBar(
-        leading: BackButton(color: Color(0xFF571F04)),
+        leading: const BackButton(color: Color(0xFF571F04)),
         backgroundColor: const Color(0xFFF4DE9C),
         toolbarHeight: 120,
-        title: Text(
+        title: const Text(
           "    GALIF",
           style: TextStyle(
             fontSize: 32.0,
@@ -34,7 +28,7 @@ class _AlimentaState extends State<Alimenta> {
             color: Color(0xFF571F04),
           ),
         ),
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(
             bottom: Radius.circular(59),
           ),
@@ -53,12 +47,5 @@ class _AlimentaState extends State<Alimenta> {
             ),
           ),
     );
-  }
-
-  void onTabTapped(int index) {
-    //colocar a ação que será feita ao clicar nos botões
-    setState(() {
-      _indiceAtual = index;
-    });
-  }   
-  }
+  } 
+}

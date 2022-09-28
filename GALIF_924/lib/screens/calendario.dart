@@ -1,6 +1,3 @@
-import 'package:GALIF_924/screens/gridview_page.dart';
-import 'package:GALIF_924/screens/menu.dart';
-import 'package:GALIF_924/screens/notification.dart';
 import 'package:flutter/material.dart';
 
 class Calendario extends StatefulWidget {
@@ -11,13 +8,7 @@ class Calendario extends StatefulWidget {
 }
 
 class _CalendarioState extends State<Calendario> {
-  int _indiceAtual = 1;
-  List screens = const [
-    Notificacao(),
-    Menu(),
-    GridViewPage(),
-  ];
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +17,7 @@ class _CalendarioState extends State<Calendario> {
         leading: BackButton(color: Color(0xFF571F04)),
         backgroundColor: const Color(0xFFF4DE9C),
         toolbarHeight: 120,
-        title: Text(
+        title: const Text(
           "    GALIF",
           style: TextStyle(
             fontSize: 32.0,
@@ -34,7 +25,7 @@ class _CalendarioState extends State<Calendario> {
             color: Color(0xFF571F04),
           ),
         ),
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(
             bottom: Radius.circular(59),
           ),
@@ -43,8 +34,8 @@ class _CalendarioState extends State<Calendario> {
       body: Center(child: Form(  
         child: Column(
           children: <Widget>[
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               "CALENDÁRIO",
               style: TextStyle(
                 fontSize: 26.0,
@@ -52,17 +43,21 @@ class _CalendarioState extends State<Calendario> {
                 color: Color(0xFF571F04),
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Image.network(
               'https://i.ibb.co/9qh2ZBg/Design-sem-nome.png',
               width: 335,
               height: 335,
             ),
-            SizedBox(height: 10),
-            Container(
+            const SizedBox(height: 10),
+            SizedBox(
               width: 130,
               child: ElevatedButton(
                 onPressed: onPressedButton,
+                style: ElevatedButton.styleFrom(
+                  primary: Color(0xFFF4DE9C),
+                  shape: RoundedRectangleBorder(),
+                ),
                 child: Row(
                   children: [
                     Text(
@@ -79,10 +74,6 @@ class _CalendarioState extends State<Calendario> {
                     ),
                   ],
                 ),
-                style: ElevatedButton.styleFrom(
-                  primary: Color(0xFFF4DE9C),
-                  shape: RoundedRectangleBorder(),
-                ),
               ),
             ),
           ],
@@ -90,13 +81,6 @@ class _CalendarioState extends State<Calendario> {
       ),
       ),
     );
-  }
-
-  void onTabTapped(int index) {
-    //colocar a ação que será feita ao clicar nos botões
-    setState(() {
-      _indiceAtual = index;
-    });
   }
 
   void onPressedButton() {

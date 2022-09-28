@@ -43,13 +43,13 @@ class _HomePageState extends State<HomePage> {
       ),
       body: body[_indiceAtual],
       bottomNavigationBar: BottomNavigationBar(
-        showSelectedLabels: false, //retirar label
-        showUnselectedLabels: false, //retirar label ao ser selecionada
+        showSelectedLabels: false, //Retirar label (Nome que fica escrito na parte de baixo do icon)
+        showUnselectedLabels: false, //Retirar label (Nome que fica escrito na parte de baixo do icon) ao ser selecionada
         backgroundColor:
-            const Color(0xFFF4DE9C), //cor da barra do BottomNavigationBar
+            const Color(0xFFF4DE9C), //Cor da barra do BottomNavigationBar
         currentIndex: _indiceAtual,
-        onTap: onTabTapped, //ação ao clicar no icone
-        items: [
+        onTap: onTabTapped, //Ação ao clicar no icone
+        items: const [ //A palavra-chave const é usada quando o valor da variável é conhecido em tempo de compilação e nunca muda.  O motivo é o aumento de desempenho, pois o Flutter pode economizar alguns cálculos entendendo que pode reutilizar aquele widget de um redesenho anterior no atual, já que é um valor constante.
           BottomNavigationBarItem(
               icon: Icon(Icons.add_alert, size: 40, color: Color.fromARGB(255, 104, 78, 65)), label: "", activeIcon: Icon(Icons.add_alert, color: Color(0xFF571F04), size: 40),
           ),
@@ -59,14 +59,13 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
               icon: Icon(Icons.person, size: 40, color: Color.fromARGB(255, 104, 78, 65)), label: "", activeIcon: Icon(Icons.person, color: Color(0xFF571F04), size: 40),
           ),
-  
         ],
       ),
     );
   }
 
   void onTabTapped(int index) {
-    //colocar a ação que será feita ao clicar nos botões
+    //Colocar a ação que será feita ao clicar nos botões
     setState(() {
       _indiceAtual = index;
     });
