@@ -42,9 +42,9 @@ class _TelaDeInserirState extends State<TelaDeInserir> {
                 const SizedBox( height: 10),
 
                 TextFormField(
-                  decoration:
-                  const InputDecoration(labelText: 'QUAL O TIPO DE INSERÇÃO?',
-                      labelStyle: TextStyle( fontSize: 17, color: Color(0xFF571F04),),
+                  cursorColor: Color(0xFF571F04),
+                  decoration: const InputDecoration(labelText: 'QUAL O TIPO DE INSERÇÃO?',
+                      labelStyle: TextStyle( fontSize: 17, color: Color(0xFFF4DE9C), fontWeight: FontWeight.bold),
                       enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide( color: Color(0xFFF4DE9C), width: 2,)
                       )
@@ -55,19 +55,27 @@ class _TelaDeInserirState extends State<TelaDeInserir> {
                 //text input
 
                 TextFormField(
+                  cursorColor: Color(0xFF571F04),
                   decoration: const InputDecoration(labelText: 'ESPÉCIE DO INDIVÍDUO:',
-                      labelStyle: TextStyle(fontSize: 17, color: Color(0xFF571F04),),
+                      labelStyle: TextStyle(fontSize: 17, color: Color(0xFFF4DE9C), fontWeight: FontWeight.bold),
                       enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Color(0xFFF4DE9C), width: 2,)
-                      )
+                      ),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                        color: Color(0xFFF4DE9C),
+                        width: 2,
+                        )
+                      ),
                    ),
                  ),
                 SizedBox(height: MediaQuery.of(context).size.width * 0.1,),
                 const SizedBox(height: 2),
 
                 TextFormField(
+                  cursorColor: Color(0xFF571F04),
                   decoration: const InputDecoration(labelText: 'IDADE DO INDIVÍDUO:', hintText: 'A idade deve ser em semanas',
-                      labelStyle: TextStyle(fontSize: 17, color: Color(0xFF571F04),),
+                      labelStyle: TextStyle(fontSize: 17, color: Color(0xFFF4DE9C), fontWeight: FontWeight.bold),
                       enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Color(0xFFF4DE9C), width: 2,
                           )
@@ -78,8 +86,9 @@ class _TelaDeInserirState extends State<TelaDeInserir> {
                 const SizedBox(height: 2),
 
                 TextFormField(
+                  cursorColor: Color(0xFF571F04),
                   decoration: const InputDecoration(labelText: 'PESO DO INDIVÍDUO:', hintText: ' 0.00 kg',
-                      labelStyle: TextStyle( fontSize: 17, color: Color(0xFF571F04),),
+                      labelStyle: TextStyle( fontSize: 17, color: Color(0xFFF4DE9C), fontWeight: FontWeight.bold),
                       enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide( color: Color(0xFFF4DE9C), width: 2,)
                       )
