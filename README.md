@@ -21,7 +21,8 @@ Projeto das aulas da disciplina de Programação Móvel da turma 924 - IFAL - ca
 
 ou
 
-- Entre no arquivo "pubspec.yaml", e pressione as teclas: "ctrl+S"
+- Entre no arquivo ``pubspec.yaml``, e pressione as teclas: ``Ctrl+S``
+
 
 ## Ver as limitações dos widgets
 
