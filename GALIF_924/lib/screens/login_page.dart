@@ -19,7 +19,26 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: const Color(0xFFF25305),
         body: buildBody(),
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          backgroundColor: const Color(0xFFF4DE9C),
+          toolbarHeight: 120,
+          title: const Text(
+            "    GALIF",
+            style: TextStyle(
+              fontSize: 32.0,
+              fontWeight: FontWeight.bold,
+              color: Color(0xFF571F04),
+            ),
+          ),
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(
+              bottom: Radius.circular(59),
+            ),
+          ),
+        ),
       ),
     );
   }
@@ -31,12 +50,11 @@ class _LoginPageState extends State<LoginPage> {
         child: Form(
           key: _formKey,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const SizedBox(height: 48),
-              const Placeholder(fallbackHeight: 150),
-              const SizedBox(height: 42),
+              SizedBox(height: MediaQuery.of(context).size.width * 0.1),
               TextFormField(
+                cursorColor: Color(0xFF571F04),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Campo e-mail obrigatório';
@@ -45,54 +63,81 @@ class _LoginPageState extends State<LoginPage> {
                 },
                 controller: userController,
                 decoration: const InputDecoration(
-                    border: OutlineInputBorder(), labelText: 'Usuário'),
+                  labelText: 'E-MAIL:',
+                  hintText: 'Ex: email@email.com',
+                  labelStyle: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFFF4DE9C),
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                    color: Color(0xFFF4DE9C),
+                    width: 2,
+                  )),
+                )
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: MediaQuery.of(context).size.width * 0.1),
               TextFormField(
-                controller: passwordController,
+                cursorColor: Color(0xFF571F04),
+                decoration: const InputDecoration(
+                    labelText: 'SENHA:',
+                    labelStyle: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFFF4DE9C),
+                    ),
+                    enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                      color: Color(0xFFF4DE9C),
+                      width: 2,
+                    ))),
+                keyboardType: TextInputType.text,
+                onFieldSubmitted: (value) {},
                 obscureText: true,
+                controller: passwordController,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Campo senha obrigatório';
                   } else if (value.length < 6) {
                     return 'Senha deve possuir no mínimo 8 digitos';
                   }
-
                   return null;
                 },
-                decoration: const InputDecoration(
-                    border: OutlineInputBorder(), labelText: 'Senha'),
               ),
-              const SizedBox(height: 32),
-              const SizedBox(height: 32),
+              const SizedBox(height: 50),
               ElevatedButton(
                 onPressed: onPressed,
-                style:
-                    ElevatedButton.styleFrom(primary: const Color(0xFFF25305)),
-                child: const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 12.0),
-                  child: Text(
-                    'Entrar com a conta Hurb',
-                    style: TextStyle(
-                      fontSize: 20,
-                    ),
+                style: ElevatedButton.styleFrom(
+                  primary: const Color(0xFFF4DE9C),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                ),
+                child: const Text(
+                  'LOGIN',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF571F04),
                   ),
                 ),
               ),
-              const SizedBox(height: 16),
-              ElevatedButton(
-                onPressed: onPressedRegister,
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFFF4DE9C)),
-                child: const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 12.0),
-                  child: Text(
-                    'Registrar Usuário',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Color(0xFFF25305),
-                    ),
-                  ),
+              SizedBox(
+                height: MediaQuery.of(context).size.width * 0.025,
+              ),
+              const Text(
+                "Ainda não tem uma conta?",
+                style: TextStyle(color: Color(0xFFF4DE9C)),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.width * 0.015,
+              ),
+              InkWell(
+                onTap: onPressedRegister,
+                child: const Text(
+                  "Cadastre-se",
+                  style: TextStyle(fontSize: 18, color: Color(0xFF571F04)),
                 ),
               )
             ],

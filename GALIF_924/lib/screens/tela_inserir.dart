@@ -139,19 +139,24 @@ class _TelaDeInserirState extends State<TelaDeInserir> {
                 ElevatedButton(
                   onPressed: () async {
                     if (_formKey.currentState!.validate()) {
-                      String nomeDigitado = nomeController.text;
-                      String pesoDigitado = pesoController.text;
-                      String idadeDigitada = idadeController.text;
-                      String especieDigitado = especieController.text;
+                      if (nomeController.text.isNotEmpty && pesoController.text.isNotEmpty && idadeController.text.isNotEmpty && especieController.text.isNotEmpty) {
+                        String nomeDigitado = nomeController.text;
+                        String pesoDigitado = pesoController.text;
+                        String idadeDigitada = idadeController.text;
+                        String especieDigitado = especieController.text;
 
-                      Individuos galinha = Individuos(
-                          nome: nomeDigitado,
-                          peso: pesoDigitado,
-                          semanas: idadeDigitada,
-                          especie: especieDigitado);
-                      await GalinhaDao().criarGalinha(galinha: galinha);
-                      showSnackBar('Usuário foi salvo com sucesso!');
-                      Navigator.pushReplacementNamed(context, "HomePage");
+                        Individuos galinha = Individuos(
+                            nome: nomeDigitado,
+                            peso: pesoDigitado,
+                            semanas: idadeDigitada,
+                            especie: especieDigitado);
+                        await GalinhaDao().criarGalinha(galinha: galinha);
+                        showSnackBar('Galinha salva com sucesso!');
+                        Navigator.pushReplacementNamed(context, "HomePage");
+                      }
+                      else {
+                        showSnackBar("Dados inválidos");
+                      }
                     } else {
                       showSnackBar("Erro na validação");
                     }

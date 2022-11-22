@@ -18,7 +18,29 @@ class _RegisterUserState extends State<RegisterUser> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: buildBody(),
+      backgroundColor: const Color(0xFFF25305),
+      appBar: AppBar(
+        leading: const BackButton(
+          color: Color(0xFF571F04),
+        ),
+        automaticallyImplyLeading: false,
+        backgroundColor: const Color(0xFFF4DE9C),
+        toolbarHeight: 120,
+        title: const Text(
+          "    GALIF",
+          style: TextStyle(
+            fontSize: 32.0,
+            fontWeight: FontWeight.bold,
+            color: Color(0xFF571F04),
+          ),
+        ),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(59),
+          ),
+        ),
+      ),
+      body: buildBody(),
       ),
     );
   }
@@ -30,15 +52,11 @@ class _RegisterUserState extends State<RegisterUser> {
         child: Form(
           key: _formKey,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const SizedBox(height: 48),
-              Text(
-                "Cadastrar Usuário",
-                style: TextStyle(fontSize: 40),
-              ),
-              const SizedBox(height: 42),
               TextFormField(
+                cursorColor: Color(0xFF571F04),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Campo e-mail obrigatório';
@@ -47,10 +65,22 @@ class _RegisterUserState extends State<RegisterUser> {
                 },
                 controller: userController,
                 decoration: const InputDecoration(
-                    border: OutlineInputBorder(), labelText: 'Usuário'),
+                  labelText: 'USUÁRIO:',
+                  labelStyle: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFFF4DE9C),
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                    color: Color(0xFFF4DE9C),
+                    width: 2,
+                  )),
+                ),
               ),
               const SizedBox(height: 16),
               TextFormField(
+                cursorColor: Color(0xFF571F04),
                 controller: passwordController,
                 obscureText: true,
                 validator: (value) {
@@ -59,25 +89,37 @@ class _RegisterUserState extends State<RegisterUser> {
                   } else if (value.length < 6) {
                     return 'Senha deve possuir no mínimo 8 digitos';
                   }
-
                   return null;
                 },
                 decoration: const InputDecoration(
-                    border: OutlineInputBorder(), labelText: 'Senha'),
+                  labelText: 'SENHA:',
+                  labelStyle: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFFF4DE9C),
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                    color: Color(0xFFF4DE9C),
+                    width: 2,
+                  )),
+                ),
               ),
-              const SizedBox(height: 32),
-              const SizedBox(height: 32),
+              const SizedBox(height: 50),
               ElevatedButton(
                 onPressed: onPressed,
-                style:
-                    ElevatedButton.styleFrom(primary: const Color(0xFFF25305)),
-                child: const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 12.0),
-                  child: Text(
-                    'Registrar Usuário',
-                    style: TextStyle(
-                      fontSize: 20,
-                    ),
+                style: ElevatedButton.styleFrom(
+                  primary: const Color(0xFFF4DE9C),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                ),
+                child: const Text(
+                  'CADASTRAR',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF571F04),
                   ),
                 ),
               ),
@@ -97,6 +139,7 @@ class _RegisterUserState extends State<RegisterUser> {
       User userCriado =
           User(username: userDigitado, password: passwordDigitado);
       await UserDao().salvarUser(user: userCriado);
+      await UserDao().listarUsers();
       showSnackBar('Usuário foi salvo com sucesso!');
       Navigator.pop(context);
     } else {
