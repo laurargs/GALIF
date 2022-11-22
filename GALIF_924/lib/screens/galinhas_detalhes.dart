@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 
 class galinhas_detalhes extends StatefulWidget {
   final Individuos individuos;
+  final String imagem;
 
   const galinhas_detalhes({
     Key? key,
     required this.individuos,
+    required this.imagem,
   }) : super(key: key);
 
   @override
@@ -20,7 +22,7 @@ class _galinhas_detalhesState extends State<galinhas_detalhes> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset(widget.individuos.imagem),
+          Image.asset(widget.imagem),
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(
@@ -47,7 +49,7 @@ class _galinhas_detalhesState extends State<galinhas_detalhes> {
                   children: [
                     Expanded(
                       child: Text(
-                        widget.individuos.semanas,
+                        "${widget.individuos.semanas} semanas",
                         style: const TextStyle(
                           fontSize: 20,
                         ),
@@ -55,7 +57,7 @@ class _galinhas_detalhesState extends State<galinhas_detalhes> {
                     ),
                     const SizedBox(width: 24),
                     Text(
-                      "Peso: ${widget.individuos.peso}",
+                      "Peso: ${widget.individuos.peso}Kg",
                       style: const TextStyle(
                         fontSize: 20,
                       ),

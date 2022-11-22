@@ -1,4 +1,5 @@
 import 'package:GALIF_924/data/Bottom.dart';
+import 'package:GALIF_924/domain/new_path.dart';
 import 'package:GALIF_924/domain/variaveis_galinhas.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,7 @@ class Inicio extends StatefulWidget {
 }
 
 class _InicioState extends State<Inicio> {
-  List<NewPath> lista = Bottom.listabottom;
+  List lista = Bottom.listabottom;
   @override
   Widget build(BuildContext context) {
     pushLogin();
@@ -22,7 +23,7 @@ class _InicioState extends State<Inicio> {
 
   void pushLogin() {
     Future.delayed(const Duration(seconds: 4), () {
-      Navigator.pushReplacementNamed(context, "Login");
+      Navigator.pushReplacementNamed(context, "LoginBD");
     });
   }
 }

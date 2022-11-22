@@ -1,27 +1,29 @@
-import 'package:flutter/cupertino.dart';
-
 class Individuos {
-  final String imagem;
-  final String nome;
-  final String peso;
-  final String semanas;
-  final String especie;
+  late String nome;
+  late String peso;
+  late String semanas;
+  late String especie;
 
   Individuos({
-    required this.imagem,
     required this.nome,
     required this.peso,
     required this.semanas,
     required this.especie,
   });
-}
 
-class NewPath {
-  final String imagem;
-  final String rota;
+  Individuos.fromJson(Map<String, dynamic> json) {
+    nome = json['nome'];
+    peso = json['peso'];
+    semanas = json['semanas'];
+    especie = json['especie'];
+  }
 
-  NewPath({
-    required this.imagem,
-    this.rota = '',
-  });
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = {};
+    data['nome'] = nome;
+    data['peso'] = peso;
+    data['semanas'] = semanas;
+    data['especie'] = especie;
+    return data;
+  }
 }

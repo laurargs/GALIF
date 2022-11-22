@@ -1,3 +1,5 @@
+import 'package:GALIF_924/data/galinha_dao.dart';
+import 'package:GALIF_924/domain/variaveis_galinhas.dart';
 import 'package:flutter/material.dart';
 
 class TelaDeInserir extends StatefulWidget {
@@ -8,6 +10,11 @@ class TelaDeInserir extends StatefulWidget {
 }
 
 class _TelaDeInserirState extends State<TelaDeInserir> {
+  final _formKey = GlobalKey<FormState>();
+  final nomeController = TextEditingController();
+  final pesoController = TextEditingController();
+  final especieController = TextEditingController();
+  final idadeController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -31,75 +38,123 @@ class _TelaDeInserirState extends State<TelaDeInserir> {
           ),
         ),
       ),
-      body:
-      Container( 
-      padding: const EdgeInsets.all(20.0),
+      body: Container(
+        padding: const EdgeInsets.all(20.0),
         //form
         child: SingleChildScrollView(
           child: Form(
+            key: _formKey,
             child: Column(
               children: <Widget>[
-                const SizedBox( height: 10),
-
+                const SizedBox(height: 10),
                 TextFormField(
-                  cursorColor: Color(0xFF571F04),
-                  decoration: const InputDecoration(labelText: 'QUAL O TIPO DE INSERÇÃO?',
-                      labelStyle: TextStyle( fontSize: 17, color: Color(0xFFF4DE9C), fontWeight: FontWeight.bold),
+                  controller: nomeController,
+                  cursorColor: const Color(0xFF571F04),
+                  decoration: const InputDecoration(
+                      labelText: 'NOME:',
+                      labelStyle: TextStyle(
+                          fontSize: 17,
+                          color: Color(0xFFF4DE9C),
+                          fontWeight: FontWeight.bold),
                       enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide( color: Color(0xFFF4DE9C), width: 2,)
-                      )
-                   ),
+                          borderSide: BorderSide(
+                        color: Color(0xFFF4DE9C),
+                        width: 2,
+                      ))),
                 ),
-                SizedBox(height: MediaQuery.of(context).size.width * 0.1,),
+                SizedBox(
+                  height: MediaQuery.of(context).size.width * 0.1,
+                ),
                 const SizedBox(height: 2),
                 //text input
 
                 TextFormField(
-                  cursorColor: Color(0xFF571F04),
-                  decoration: const InputDecoration(labelText: 'ESPÉCIE DO INDIVÍDUO:',
-                      labelStyle: TextStyle(fontSize: 17, color: Color(0xFFF4DE9C), fontWeight: FontWeight.bold),
-                      enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Color(0xFFF4DE9C), width: 2,)
-                      ),
-                      focusedBorder: UnderlineInputBorder(
+                  controller: especieController,
+                  cursorColor: const Color(0xFF571F04),
+                  decoration: const InputDecoration(
+                    labelText: 'ESPÉCIE:',
+                    labelStyle: TextStyle(
+                        fontSize: 17,
+                        color: Color(0xFFF4DE9C),
+                        fontWeight: FontWeight.bold),
+                    enabledBorder: UnderlineInputBorder(
                         borderSide: BorderSide(
+                      color: Color(0xFFF4DE9C),
+                      width: 2,
+                    )),
+                    focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                      color: Color(0xFFF4DE9C),
+                      width: 2,
+                    )),
+                  ),
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.width * 0.1,
+                ),
+                const SizedBox(height: 2),
+
+                TextFormField(
+                  controller: idadeController,
+                  cursorColor: const Color(0xFF571F04),
+                  decoration: const InputDecoration(
+                      labelText: 'IDADE:',
+                      hintText: 'A idade deve ser em semanas',
+                      labelStyle: TextStyle(
+                          fontSize: 17,
+                          color: Color(0xFFF4DE9C),
+                          fontWeight: FontWeight.bold),
+                      enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
                         color: Color(0xFFF4DE9C),
                         width: 2,
-                        )
-                      ),
-                   ),
-                 ),
-                SizedBox(height: MediaQuery.of(context).size.width * 0.1,),
+                      ))),
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.width * 0.1,
+                ),
                 const SizedBox(height: 2),
 
                 TextFormField(
-                  cursorColor: Color(0xFF571F04),
-                  decoration: const InputDecoration(labelText: 'IDADE DO INDIVÍDUO:', hintText: 'A idade deve ser em semanas',
-                      labelStyle: TextStyle(fontSize: 17, color: Color(0xFFF4DE9C), fontWeight: FontWeight.bold),
+                  controller: pesoController,
+                  cursorColor: const Color(0xFF571F04),
+                  decoration: const InputDecoration(
+                      labelText: 'PESO:',
+                      hintText: ' 0.00 kg',
+                      labelStyle: TextStyle(
+                          fontSize: 17,
+                          color: Color(0xFFF4DE9C),
+                          fontWeight: FontWeight.bold),
                       enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Color(0xFFF4DE9C), width: 2,
-                          )
-                      )
-                  ),
+                          borderSide: BorderSide(
+                        color: Color(0xFFF4DE9C),
+                        width: 2,
+                      ))),
                 ),
-                SizedBox(height: MediaQuery.of(context).size.width * 0.1,),
-                const SizedBox(height: 2),
-
-                TextFormField(
-                  cursorColor: Color(0xFF571F04),
-                  decoration: const InputDecoration(labelText: 'PESO DO INDIVÍDUO:', hintText: ' 0.00 kg',
-                      labelStyle: TextStyle( fontSize: 17, color: Color(0xFFF4DE9C), fontWeight: FontWeight.bold),
-                      enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide( color: Color(0xFFF4DE9C), width: 2,)
-                      )
-                  ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.width * 0.1,
                 ),
-                SizedBox(height: MediaQuery.of(context).size.width * 0.1,),
                 const SizedBox(height: 2),
 
                 ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, "TelaInserir");
+                  onPressed: () async {
+                    if (_formKey.currentState!.validate()) {
+                      String nomeDigitado = nomeController.text;
+                      String pesoDigitado = pesoController.text;
+                      String idadeDigitada = idadeController.text;
+                      String especieDigitado = especieController.text;
+
+                      Individuos galinha = Individuos(
+                          nome: nomeDigitado,
+                          peso: pesoDigitado,
+                          semanas: idadeDigitada,
+                          especie: especieDigitado);
+                      await GalinhaDao().criarGalinha(galinha: galinha);
+                      showSnackBar('Usuário foi salvo com sucesso!');
+                      Navigator.pushReplacementNamed(context, "HomePage");
+                    } else {
+                      showSnackBar("Erro na validação");
+                    }
                   },
                   style: ElevatedButton.styleFrom(
                     primary: const Color(0xFFF4DE9C),
@@ -107,7 +162,8 @@ class _TelaDeInserirState extends State<TelaDeInserir> {
                       borderRadius: BorderRadius.circular(16),
                     ),
                   ),
-                  child: const Text('INSERIR',
+                  child: const Text(
+                    'INSERIR',
                     style: TextStyle(
                       fontSize: 20,
                       color: Color(0xFF571F04),
@@ -120,5 +176,17 @@ class _TelaDeInserirState extends State<TelaDeInserir> {
         ),
       ),
     );
+  }
+
+  showSnackBar(String msg) {
+    final snackBar = SnackBar(
+      behavior: SnackBarBehavior.floating,
+      margin: const EdgeInsets.symmetric(
+        vertical: 80,
+        horizontal: 32,
+      ),
+      content: Text(msg),
+    );
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
   }
 }

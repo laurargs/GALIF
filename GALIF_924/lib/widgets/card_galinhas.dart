@@ -4,10 +4,11 @@ import 'package:flutter/material.dart';
 
 class Card_Galinhas extends StatefulWidget {
   final Individuos individuos;
+  final String imagem;
 
   const Card_Galinhas({
     Key? key,
-    required this.individuos,
+    required this.individuos, required this.imagem,
   }) : super(key: key);
 
   @override
@@ -25,6 +26,7 @@ class _Card_GalinhasState extends State<Card_Galinhas> {
             builder: (context) {
               return galinhas_detalhes(
                 individuos: widget.individuos,
+                imagem: widget.imagem,
               );
             },
           ),
@@ -38,7 +40,7 @@ class _Card_GalinhasState extends State<Card_Galinhas> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            buildImage(widget.individuos.imagem),
+            buildImage(widget.imagem),
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: Column(

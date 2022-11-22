@@ -1,3 +1,4 @@
+import 'package:GALIF_924/domain/new_path.dart';
 import 'package:GALIF_924/domain/variaveis_galinhas.dart';
 import 'package:flutter/cupertino.dart';
 

@@ -8,8 +8,10 @@ import 'package:GALIF_924/screens/home_page.dart';
 import 'package:GALIF_924/screens/inicio.dart';
 import 'package:GALIF_924/screens/limpeza.dart';
 import 'package:GALIF_924/screens/login.dart';
+import 'package:GALIF_924/screens/login_page.dart';
 import 'package:GALIF_924/screens/menu.dart';
 import 'package:GALIF_924/screens/notification.dart';
+import 'package:GALIF_924/screens/register_user.dart';
 import 'package:GALIF_924/screens/tela_inserir.dart';
 import 'package:flutter/material.dart';
 
@@ -32,6 +34,8 @@ void main() {
         "Menu": (context) => const Menu(),
         "Notificacao": (context) => const Notificacao(),
         "TelaInserir": (context) => const TelaDeInserir(),
+        "LoginBD": (context) => const LoginPage(),
+        "CadastroBR": (context) => const RegisterUser(),
       },
     ),
   );
