@@ -1,4 +1,5 @@
 import 'package:GALIF_924/data/user_dao.dart';
+import 'package:GALIF_924/data/address_api.dart';
 import 'package:GALIF_924/domain/user.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,8 @@ class _RegisterUserState extends State<RegisterUser> {
   final _formKey = GlobalKey<FormState>();
   TextEditingController userController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  TextEditingController cepController = TextEditingController();
+  TextEditingController addressController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +57,7 @@ class _RegisterUserState extends State<RegisterUser> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const SizedBox(height: 48),
+              const SizedBox(height: 7),
               TextFormField(
                 cursorColor: Color(0xFF571F04),
                 validator: (value) {
@@ -105,7 +108,36 @@ class _RegisterUserState extends State<RegisterUser> {
                   )),
                 ),
               ),
-              const SizedBox(height: 50),
+
+              
+              const SizedBox(height: 16),
+              TextFormField(
+                controller: cepController,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Campo obrigatório';
+                  }
+
+                  return null;
+                },
+                onEditingComplete: onEditingComplete,
+                decoration: const InputDecoration(
+                    border: OutlineInputBorder(), labelText: 'CEP'),
+              ),
+              const SizedBox(height: 16),
+              TextFormField(
+                controller: addressController,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Campo obrigatório';
+                  }
+
+                  return null;
+                },
+                decoration: const InputDecoration(
+                    border: OutlineInputBorder(), labelText: 'Endereço'),
+              ),
+              const SizedBox(height: 30),
               ElevatedButton(
                 onPressed: onPressed,
                 style: ElevatedButton.styleFrom(
@@ -157,5 +189,11 @@ class _RegisterUserState extends State<RegisterUser> {
       content: Text(msg),
     );
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
+  }
+
+  Future<void> onEditingComplete() async {
+    Address address = await AddressApi().findAddressByCep(cepController.text);
+
+    addressController.text = address.logradouro;
   }
 }

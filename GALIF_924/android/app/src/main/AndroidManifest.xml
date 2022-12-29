@@ -1,6 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.aula_924">
-   <application
+
+    <meta-data android:name="com.google.android.geo.API_KEY"
+           android:value="AIzaSyBnsiNqbSiMADmYdFVbVLRnIWR60EbZlm0"/>
+
+    <application
         android:label="GALIF"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">

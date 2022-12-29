@@ -22,7 +22,25 @@ class _galinhas_detalhesState extends State<galinhas_detalhes> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset(widget.imagem),
+          InkWell(
+            child: Image.network(widget.magem),
+            onTap: () async {
+              List<Location> locations =
+                  await locationFromAddress(widget.cep);
+              Location location = locations[0];
+              LatLng latLong = LatLng(location.latitude, location.longitude);
+
+              // Abrir o Mapa
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return MapPage(latLng: latLong);
+                  },
+                ),
+              );
+            },
+          ),
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(
