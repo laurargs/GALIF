@@ -23,7 +23,7 @@ class _galinhas_detalhesState extends State<galinhas_detalhes> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           InkWell(
-            child: Image.network(widget.magem),
+            child: Image.network(widget.imagem),
             onTap: () async {
               List<Location> locations =
                   await locationFromAddress(widget.cep);
