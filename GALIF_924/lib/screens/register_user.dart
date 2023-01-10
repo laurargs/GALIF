@@ -1,4 +1,6 @@
+import 'package:GALIF_924/data/address_api.dart';
 import 'package:GALIF_924/data/user_dao.dart';
+import 'package:GALIF_924/domain/Adress.dart';
 import 'package:GALIF_924/domain/user.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +15,10 @@ class _RegisterUserState extends State<RegisterUser> {
   final _formKey = GlobalKey<FormState>();
   TextEditingController userController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  TextEditingController cepController = TextEditingController();
+  TextEditingController cidadeController = TextEditingController();
+  TextEditingController ruaController = TextEditingController();
+  TextEditingController bairroController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +60,7 @@ class _RegisterUserState extends State<RegisterUser> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const SizedBox(height: 48),
+              const SizedBox(height: 3),
               TextFormField(
                 cursorColor: Color(0xFF571F04),
                 validator: (value) {
@@ -105,7 +111,101 @@ class _RegisterUserState extends State<RegisterUser> {
                   )),
                 ),
               ),
-              const SizedBox(height: 50),
+              const SizedBox(height: 16),
+              TextFormField(
+                controller: cepController,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Campo obrigatório';
+                  }
+                  return null;
+                },
+                onEditingComplete: onEditingComplete,
+                
+                decoration: const InputDecoration(
+                  labelText: 'CEP DO CAMPUS:',
+                  labelStyle: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFFF4DE9C),
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                    color: Color(0xFFF4DE9C),
+                    width: 2,
+                  )),
+                ),
+              ),
+              const SizedBox(height: 16),
+              TextFormField(
+                controller: cidadeController,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Campo obrigatório';
+                  }
+                  return null;
+                },
+                decoration: const InputDecoration(
+                  labelText: 'CIDADE DO CAMPUS:',
+                  labelStyle: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFFF4DE9C),
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                    color: Color(0xFFF4DE9C),
+                    width: 2,
+                  )),
+                ),
+              ),
+              const SizedBox(height: 16),
+              TextFormField(
+                controller: ruaController,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Campo obrigatório';
+                  }
+                  return null;
+                },
+                decoration: const InputDecoration(
+                  labelText: 'RUA DO CAMPUS:',
+                  labelStyle: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFFF4DE9C),
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                    color: Color(0xFFF4DE9C),
+                    width: 2,
+                  )),
+                ),
+              ),
+              const SizedBox(height: 16),
+              TextFormField(
+                controller: bairroController,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Campo obrigatório';
+                  }
+                  return null;
+                },
+                decoration: const InputDecoration(
+                  labelText: 'BAIRRO DO CAMPUS:',
+                  labelStyle: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFFF4DE9C),
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                    color: Color(0xFFF4DE9C),
+                    width: 2,
+                  )),
+                ),
+              ),
+              const SizedBox(height: 30),
               ElevatedButton(
                 onPressed: onPressed,
                 style: ElevatedButton.styleFrom(
@@ -157,5 +257,13 @@ class _RegisterUserState extends State<RegisterUser> {
       content: Text(msg),
     );
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
+  }
+
+  Future<void> onEditingComplete() async {
+    Address address = await AddressApi().findAddressByCep(cepController.text);
+
+    cidadeController.text = address.localidade;
+    ruaController.text = address.logradouro;
+    bairroController.text = address.bairro;
   }
 }
